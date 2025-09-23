@@ -17,106 +17,131 @@ import {
   Users,
   DollarSign,
   Clock,
-  Award
+  Award,
+  Shield
 } from 'lucide-react'
 import PortfolioFilter from './PortfolioFilter'
 
 const projects = [
   {
     id: 1,
-    title: "DeFi Lending Platform",
+    title: "Enterprise DeFi Protocol",
     category: "defi",
-    description: "Built a comprehensive DeFi lending platform with smart contracts, yield farming, and automated market making capabilities.",
+    description: "Developed a comprehensive DeFi lending protocol for enterprise clients with advanced risk management, multi-asset support, and institutional-grade security features.",
     image: "/api/placeholder/400/300",
-    technologies: ["Solidity", "React", "Web3.js", "IPFS"],
+    technologies: ["Solidity", "React", "Web3.js", "Chainlink", "OpenZeppelin"],
     results: [
-      { metric: "TVL", value: "$50M+", icon: DollarSign },
-      { metric: "Users", value: "10K+", icon: Users },
-      { metric: "Growth", value: "300%", icon: TrendingUp }
+      { metric: "TVL", value: "$25M+", icon: DollarSign },
+      { metric: "Active Users", value: "5K+", icon: Users },
+      { metric: "Security Score", value: "A+", icon: Award }
     ],
     href: "/portfolio/defi-lending-platform",
     color: "from-green-500 to-emerald-600",
-    featured: true
+    featured: true,
+    client: "Fortune 500 Financial Services",
+    auditStatus: "CertiK Audited",
+    demoUrl: "https://demo.trivexa.com/defi-protocol",
+    githubUrl: "https://github.com/trivexa-technologies/defi-protocol"
   },
   {
     id: 2,
-    title: "NFT Marketplace",
+    title: "Enterprise NFT Platform",
     category: "nft",
-    description: "Developed a full-featured NFT marketplace with minting, trading, and auction capabilities for digital art and collectibles.",
+    description: "Built a white-label NFT marketplace solution for enterprise clients with custom branding, advanced analytics, and compliance features.",
     image: "/api/placeholder/400/300",
-    technologies: ["Ethereum", "Next.js", "OpenSea API", "MetaMask"],
+    technologies: ["Ethereum", "Next.js", "IPFS", "MetaMask", "OpenSea SDK"],
     results: [
-      { metric: "NFTs", value: "100K+", icon: Database },
-      { metric: "Volume", value: "$5M+", icon: DollarSign },
-      { metric: "Growth", value: "500%", icon: TrendingUp }
+      { metric: "NFTs Minted", value: "50K+", icon: Database },
+      { metric: "Trading Volume", value: "$2.5M+", icon: DollarSign },
+      { metric: "Client Satisfaction", value: "98%", icon: TrendingUp }
     ],
     href: "/portfolio/nft-marketplace",
     color: "from-purple-500 to-violet-600",
-    featured: true
+    featured: true,
+    client: "Global Media Company",
+    auditStatus: "OpenZeppelin Audited",
+    demoUrl: "https://demo.trivexa.com/nft-platform",
+    githubUrl: "https://github.com/trivexa-technologies/nft-platform"
   },
   {
     id: 3,
-    title: "Supply Chain Tracking",
+    title: "Pharmaceutical Supply Chain",
     category: "smart-contracts",
-    description: "Implemented blockchain-based supply chain tracking system for pharmaceutical companies ensuring product authenticity.",
+    description: "Implemented a blockchain-based supply chain tracking system for pharmaceutical companies ensuring product authenticity and regulatory compliance.",
     image: "/api/placeholder/400/300",
-    technologies: ["Hyperledger", "React", "Node.js", "MongoDB"],
+    technologies: ["Hyperledger Fabric", "React", "Node.js", "MongoDB", "IoT"],
     results: [
-      { metric: "Products", value: "1M+", icon: Database },
-      { metric: "Accuracy", value: "99.9%", icon: TrendingUp },
-      { metric: "Partners", value: "50+", icon: Users }
+      { metric: "Products Tracked", value: "500K+", icon: Database },
+      { metric: "Traceability", value: "99.8%", icon: TrendingUp },
+      { metric: "Compliance Rate", value: "100%", icon: Award }
     ],
     href: "/portfolio/supply-chain-tracking",
     color: "from-blue-500 to-cyan-600",
-    featured: false
+    featured: false,
+    client: "Leading Pharma Company",
+    auditStatus: "ConsenSys Audited",
+    demoUrl: "https://demo.trivexa.com/supply-chain",
+    githubUrl: "https://github.com/trivexa-technologies/supply-chain"
   },
   {
     id: 4,
-    title: "Gaming DApp",
+    title: "Enterprise Gaming Platform",
     category: "dapps",
-    description: "Created a play-to-earn gaming DApp with NFT integration, token rewards, and multiplayer functionality.",
+    description: "Created a play-to-earn gaming platform with enterprise features including tournament management, reward distribution, and analytics dashboard.",
     image: "/api/placeholder/400/300",
-    technologies: ["Unity", "Web3.js", "Solidity", "IPFS"],
+    technologies: ["Unity", "Web3.js", "Solidity", "IPFS", "Chainlink VRF"],
     results: [
-      { metric: "Players", value: "25K+", icon: Users },
-      { metric: "Rewards", value: "$2M+", icon: DollarSign },
-      { metric: "Engagement", value: "10x", icon: TrendingUp }
+      { metric: "Active Players", value: "15K+", icon: Users },
+      { metric: "Tournaments", value: "500+", icon: Award },
+      { metric: "User Retention", value: "85%", icon: TrendingUp }
     ],
     href: "/portfolio/gaming-dapp",
     color: "from-orange-500 to-red-600",
-    featured: false
+    featured: false,
+    client: "Gaming Studio Partner",
+    auditStatus: "CertiK Audited",
+    demoUrl: "https://demo.trivexa.com/gaming-platform",
+    githubUrl: "https://github.com/trivexa-technologies/gaming-platform"
   },
   {
     id: 5,
-    title: "AI Trading Bot",
+    title: "AI-Powered Trading System",
     category: "ai",
-    description: "Developed an AI-powered trading bot with machine learning algorithms for automated cryptocurrency trading.",
+    description: "Developed an institutional-grade AI trading system with machine learning algorithms for automated cryptocurrency portfolio management.",
     image: "/api/placeholder/400/300",
-    technologies: ["Python", "TensorFlow", "Web3.js", "APIs"],
+    technologies: ["Python", "TensorFlow", "Web3.js", "APIs", "Machine Learning"],
     results: [
-      { metric: "ROI", value: "150%", icon: TrendingUp },
-      { metric: "Trades", value: "10K+", icon: Database },
-      { metric: "Accuracy", value: "85%", icon: Award }
+      { metric: "Average ROI", value: "120%", icon: TrendingUp },
+      { metric: "Successful Trades", value: "8K+", icon: Database },
+      { metric: "Risk Score", value: "Low", icon: Award }
     ],
     href: "/portfolio/ai-trading-bot",
     color: "from-indigo-500 to-blue-600",
-    featured: false
+    featured: false,
+    client: "Investment Firm",
+    auditStatus: "Internal Security Review",
+    demoUrl: "https://demo.trivexa.com/ai-trading",
+    githubUrl: "https://github.com/trivexa-technologies/ai-trading"
   },
   {
     id: 6,
-    title: "Healthcare Records",
+    title: "Healthcare Data Platform",
     category: "smart-contracts",
-    description: "Built a secure healthcare records management system using blockchain for patient data privacy and interoperability.",
+    description: "Built a HIPAA-compliant healthcare records management system using blockchain for secure patient data sharing and interoperability.",
     image: "/api/placeholder/400/300",
-    technologies: ["Ethereum", "React", "IPFS", "Encryption"],
+    technologies: ["Ethereum", "React", "IPFS", "Zero-Knowledge Proofs", "Encryption"],
     results: [
-      { metric: "Records", value: "500K+", icon: Database },
-      { metric: "Hospitals", value: "20+", icon: Users },
-      { metric: "Security", value: "100%", icon: Award }
+      { metric: "Patient Records", value: "250K+", icon: Database },
+      { metric: "Healthcare Providers", value: "15+", icon: Users },
+      { metric: "Data Security", value: "100%", icon: Award }
     ],
     href: "/portfolio/healthcare-records",
     color: "from-red-500 to-pink-600",
-    featured: false
+    featured: false,
+    client: "Healthcare Network",
+    auditStatus: "HIPAA Compliant",
+    demoUrl: "https://demo.trivexa.com/healthcare",
+    githubUrl: "https://github.com/trivexa-technologies/healthcare"
   }
 ]
 
@@ -240,6 +265,20 @@ export default function PortfolioGrid() {
                         </div>
                       </div>
 
+                      {/* Client & Audit Info */}
+                      <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <div className="flex items-center justify-between text-sm">
+                          <div>
+                            <span className="text-gray-600 dark:text-gray-300">Client:</span>
+                            <span className="ml-2 font-medium text-gray-900 dark:text-white">{project.client}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Shield className="w-4 h-4 text-green-500 mr-1" />
+                            <span className="text-green-600 dark:text-green-400 font-medium">{project.auditStatus}</span>
+                          </div>
+                        </div>
+                      </div>
+
                       {/* CTA */}
                       <div className="flex space-x-3">
                         <Link
@@ -250,10 +289,22 @@ export default function PortfolioGrid() {
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link
-                          href={project.href}
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center justify-center px-4 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 group-hover:shadow-lg"
+                          title="View Live Demo"
                         >
                           <ExternalLink className="w-4 h-4" />
+                        </Link>
+                        <Link
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center px-4 py-3 border-2 border-gray-600 text-gray-600 dark:text-gray-400 font-semibold rounded-lg hover:bg-gray-600 hover:text-white transition-all duration-300 group-hover:shadow-lg"
+                          title="View Source Code"
+                        >
+                          <Code className="w-4 h-4" />
                         </Link>
                       </div>
                     </div>

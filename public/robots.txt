@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Allow important pages
+Allow: /services/
+Allow: /portfolio/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+Allow: /transparency/
+Allow: /privacy/
+Allow: /terms/
+Allow: /cookies/
+
+# Sitemap location
+Sitemap: https://trivexa.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -175,11 +175,8 @@ export default function RootLayout({
         "industry": "Blockchain Technology",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "123 Blockchain Street",
-          "addressLocality": "San Francisco",
-          "addressRegion": "CA",
-          "postalCode": "94105",
-          "addressCountry": "US"
+          "addressLocality": "India",
+          "addressCountry": "IN"
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -197,11 +194,33 @@ export default function RootLayout({
           "@type": "GeoCircle",
           "geoMidpoint": {
             "@type": "GeoCoordinates",
-            "latitude": 37.7749,
-            "longitude": -122.4194
+            "latitude": 12.9716,
+            "longitude": 77.5946
           },
           "geoRadius": "10000000"
-        }
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "ISO/IEC 27001:2013 Certified",
+            "credentialCategory": "Security Certification"
+          },
+          {
+            "@type": "EducationalOccupationalCredential", 
+            "name": "SOC 2 Type II Audited",
+            "credentialCategory": "Security Audit"
+          }
+        ],
+        "knowsAbout": [
+          "Blockchain Development",
+          "Smart Contract Development", 
+          "DeFi Protocols",
+          "NFT Marketplaces",
+          "Web3 Applications",
+          "Layer-1 Blockchain",
+          "Layer-2 Scaling Solutions",
+          "AI-Powered Blockchain Solutions"
+        ]
       },
       {
         "@type": "WebSite",

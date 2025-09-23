@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to chat messages
+    match /chatMessages/{document} {
+      allow read, write: if true; // For development - restrict in production
+    }
+    
+    // Allow read/write access to contact submissions
+    match /contactSubmissions/{document} {
+      allow read, write: if true; // For development - restrict in production
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

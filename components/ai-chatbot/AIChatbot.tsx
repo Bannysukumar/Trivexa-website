@@ -12,6 +12,7 @@ import {
   Sparkles
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { saveChatMessage, generateSessionId, type ChatMessage } from '@/lib/firebase-utils'
 
 interface Message {
   id: string
@@ -52,6 +53,7 @@ export default function AIChatbot() {
   ])
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
+  const [sessionId] = useState(() => generateSessionId())
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
@@ -76,8 +78,19 @@ export default function AIChatbot() {
     setInputValue('')
     setIsTyping(true)
 
+    // Save user message to Firebase
+    try {
+      await saveChatMessage({
+        text: text.trim(),
+        sender: 'user',
+        sessionId: sessionId
+      })
+    } catch (error) {
+      console.error('Failed to save user message:', error)
+    }
+
     // Simulate bot response delay
-    setTimeout(() => {
+    setTimeout(async () => {
       const botResponse = getBotResponse(text)
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -87,6 +100,17 @@ export default function AIChatbot() {
       }
       setMessages(prev => [...prev, botMessage])
       setIsTyping(false)
+
+      // Save bot response to Firebase
+      try {
+        await saveChatMessage({
+          text: botResponse,
+          sender: 'bot',
+          sessionId: sessionId
+        })
+      } catch (error) {
+        console.error('Failed to save bot message:', error)
+      }
     }, 1500)
   }
 

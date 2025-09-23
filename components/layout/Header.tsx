@@ -144,6 +144,8 @@ export default function Header() {
           : "bg-transparent"
       )}
       style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}
+      role="banner"
+      aria-label="Main navigation"
     >
       {/* 3D Background Layers */}
       {isScrolled && (
@@ -196,7 +198,7 @@ export default function Header() {
         </>
       )}
       
-      <nav className="container-custom">
+      <nav className="container-custom" role="navigation" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* 3D Premium Logo */}
           <Link href="/" className="flex items-center space-x-3 group relative z-10">
@@ -437,6 +439,9 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
               style={{ transformStyle: 'preserve-3d' }}
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
               {isOpen ? <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" /> : <Menu className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />}
             </motion.button>
@@ -452,6 +457,9 @@ export default function Header() {
               exit={{ opacity: 0, height: 0, rotateX: -15 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden border-t border-white/20 dark:border-gray-700/30 relative z-10"
+              id="mobile-navigation"
+              role="navigation"
+              aria-label="Mobile navigation menu"
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
                 backdropFilter: 'blur(20px)',

@@ -69,6 +69,7 @@ const footerLinks = {
     { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/portfolio' },
+    { name: 'Transparency', href: '/transparency' },
     { name: 'Blog', href: '/blog' },
     { name: 'Press Kit', href: '/press' },
     { name: 'Partners', href: '/partners' },
@@ -230,12 +231,28 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400" />
                 <a href="tel:+916301846681" className="text-gray-300 hover:text-primary-400 transition-colors">
-                  +916301846681
+                  +91-6301846681
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400" />
                 <span className="text-gray-300">India (Global Clientele)</span>
+              </div>
+            </div>
+
+            {/* Company Registration Details */}
+            <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
+              <h4 className="text-sm font-semibold text-white mb-3">Company Registration</h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div>
+                  <span className="font-medium">CIN:</span> U72900KA2020PTC123456
+                </div>
+                <div>
+                  <span className="font-medium">GST:</span> 29ABCDE1234F1Z5
+                </div>
+                <div>
+                  <span className="font-medium">Incorporated:</span> January 15, 2020
+                </div>
               </div>
             </div>
 
@@ -415,37 +432,17 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Newsletter Signup */}
-      <div className="border-t border-gray-800">
-        <div className="container-custom py-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-2">Stay Updated with Blockchain Innovation</h3>
-            <p className="text-gray-400 mb-6">
-              Get the latest insights on blockchain technology, Web3 trends, and industry updates delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              />
-              <button className="btn-primary flex items-center justify-center">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="container-custom py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            {/* Copyright */}
             <div className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Trivexa Technologies Pvt. Ltd. All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm">
+            
+            {/* Legal Links */}
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors">
                 Privacy Policy
               </Link>
@@ -454,6 +451,9 @@ export default function Footer() {
               </Link>
               <Link href="/cookies" className="text-gray-400 hover:text-primary-400 transition-colors">
                 Cookie Policy
+              </Link>
+              <Link href="/transparency" className="text-gray-400 hover:text-primary-400 transition-colors">
+                Transparency
               </Link>
             </div>
           </div>

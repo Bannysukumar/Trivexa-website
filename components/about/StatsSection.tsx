@@ -151,15 +151,20 @@ export default function StatsSection() {
               Our clients include Fortune 500 companies, innovative startups, and government organizations
             </p>
             
-            {/* Client Logos Placeholder */}
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
+            {/* Client Logos */}
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              {[
+                "TERM",
+                "Zerokost", 
+                "Thanvish AI",
+                "Sync AI Solutions"
+              ].map((client, i) => (
                 <div
                   key={i}
-                  className="w-24 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center"
+                  className="w-32 h-16 bg-gradient-to-r from-primary-50 to-navy-50 dark:from-primary-900/20 dark:to-navy-900/20 rounded-lg flex items-center justify-center border border-primary-200 dark:border-primary-800 hover:shadow-lg transition-all duration-300"
                 >
-                  <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">
-                    Client {i}
+                  <span className="text-primary-700 dark:text-primary-300 text-sm font-semibold">
+                    {client}
                   </span>
                 </div>
               ))}
