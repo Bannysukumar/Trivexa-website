@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { saveChatMessage, generateSessionId, type ChatMessage } from '@/lib/firebase-utils'
+import { generateAIResponse } from '@/lib/ai-training-system'
 
 interface Message {
   id: string
@@ -115,34 +116,43 @@ export default function AIChatbot() {
   }
 
   const getBotResponse = (userInput: string): string => {
-    const lowerInput = userInput.toLowerCase()
-    
-    // Check for exact matches first
-    for (const [question, answer] of Object.entries(botResponses)) {
-      if (lowerInput.includes(question.toLowerCase().split(' ')[0])) {
-        return answer
+    try {
+      // Use the enhanced AI training system
+      const aiResponse = generateAIResponse(userInput)
+      return aiResponse.answer
+    } catch (error) {
+      console.error('Error generating AI response:', error)
+      
+      // Fallback to original logic
+      const lowerInput = userInput.toLowerCase()
+      
+      // Check for exact matches first
+      for (const [question, answer] of Object.entries(botResponses)) {
+        if (lowerInput.includes(question.toLowerCase().split(' ')[0])) {
+          return answer
+        }
       }
-    }
 
-    // Keyword-based responses
-    if (lowerInput.includes('blockchain') || lowerInput.includes('layer-1') || lowerInput.includes('layer-2')) {
-      return "We specialize in comprehensive blockchain development including Layer-1 and Layer-2 solutions. Our services cover smart contracts, DApps, DeFi protocols, and custom blockchain networks. Would you like to know more about any specific aspect?"
-    }
-    
-    if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('budget')) {
-      return "Our pricing depends on project complexity and requirements. For accurate quotes, I recommend scheduling a consultation with our team. We offer competitive rates and flexible engagement models. Would you like to discuss your specific project needs?"
-    }
-    
-    if (lowerInput.includes('timeline') || lowerInput.includes('duration') || lowerInput.includes('how long')) {
-      return "Project timelines vary based on complexity. Simple smart contracts take 2-4 weeks, while complex DApps can take 3-6 months. We provide detailed project roadmaps during consultation. What type of project are you planning?"
-    }
-    
-    if (lowerInput.includes('contact') || lowerInput.includes('reach') || lowerInput.includes('get in touch')) {
-      return "You can reach us at hello@trivexa.com or +916301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?"
-    }
+      // Keyword-based responses
+      if (lowerInput.includes('blockchain') || lowerInput.includes('layer-1') || lowerInput.includes('layer-2')) {
+        return "We specialize in comprehensive blockchain development including Layer-1 and Layer-2 solutions. Our services cover smart contracts, DApps, DeFi protocols, and custom blockchain networks. Would you like to know more about any specific aspect?"
+      }
+      
+      if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('budget')) {
+        return "Our pricing depends on project complexity and requirements. For accurate quotes, I recommend scheduling a consultation with our team. We offer competitive rates and flexible engagement models. Would you like to discuss your specific project needs?"
+      }
+      
+      if (lowerInput.includes('timeline') || lowerInput.includes('duration') || lowerInput.includes('how long')) {
+        return "Project timelines vary based on complexity. Simple smart contracts take 2-4 weeks, while complex DApps can take 3-6 months. We provide detailed project roadmaps during consultation. What type of project are you planning?"
+      }
+      
+      if (lowerInput.includes('contact') || lowerInput.includes('reach') || lowerInput.includes('get in touch')) {
+        return "You can reach us at hello@trivexa.com or +916301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?"
+      }
 
-    // Default response
-    return "I understand you're interested in our blockchain development services. While I can provide general information, for detailed technical discussions and project-specific queries, I recommend connecting with our expert team. You can reach us at hello@trivexa.com or schedule a consultation. Is there anything specific about blockchain development I can help clarify?"
+      // Default response
+      return "I understand you're interested in our blockchain development services. While I can provide general information, for detailed technical discussions and project-specific queries, I recommend connecting with our expert team. You can reach us at hello@trivexa.com or schedule a consultation. Is there anything specific about blockchain development I can help clarify?"
+    }
   }
 
   const handleQuickQuestion = (question: string) => {
