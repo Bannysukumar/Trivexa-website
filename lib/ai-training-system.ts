@@ -43,7 +43,8 @@ class TrivexaAITrainingSystem {
 
   // Get training statistics
   getTrainingStats(): TrainingStats {
-    const categories = [...new Set(this.trainingData.map(doc => doc.category))]
+    const categorySet = new Set(this.trainingData.map(doc => doc.category))
+    const categories = Array.from(categorySet)
     return {
       totalDocuments: this.trainingData.length,
       categories,
