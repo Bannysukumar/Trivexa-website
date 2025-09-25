@@ -19,7 +19,8 @@ import {
   RefreshCw,
   CheckCircle,
   AlertCircle,
-  Info
+  Info,
+  X
 } from 'lucide-react'
 import { 
   allTrainingData, 
