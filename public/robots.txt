@@ -20,6 +20,7 @@ Allow: /transparency/
 Allow: /privacy/
 Allow: /terms/
 Allow: /cookies/
+Allow: /ai-blockchain-development/
 
 # Sitemap location
 Sitemap: https://trivexa.com/sitemap.xml

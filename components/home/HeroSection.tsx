@@ -230,9 +230,9 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-hero text-gray-900 dark:text-white mb-8 leading-tight text-shadow-lg"
             >
-              Enterprise-Grade{' '}
-              <span className="gradient-text animate-glow">Blockchain Solutions</span>{' '}
-              for Global Businesses
+              AI-Powered{' '}
+              <span className="gradient-text animate-glow">Blockchain Development</span>{' '}
+              with ChatGPT Integration
             </motion.h1>
 
             {/* Premium Subtitle */}
@@ -242,9 +242,9 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-3xl font-medium"
             >
-              Trivexa Technologies specializes in enterprise blockchain solutions, serving Fortune 500 
-              companies like TERM, Zerokost, and Thanvish AI. Our team of 50+ blockchain experts has 
-              delivered 100+ production-ready solutions with 99.9% uptime and zero security breaches.
+              Trivexa Technologies is the leading AI blockchain development company, integrating ChatGPT 
+              and advanced AI technologies for automated smart contract development, AI-powered DApps, 
+              and intelligent Web3 solutions. Serving Fortune 500 companies with 100+ AI-driven projects.
             </motion.p>
 
             {/* Premium CTA Buttons */}
