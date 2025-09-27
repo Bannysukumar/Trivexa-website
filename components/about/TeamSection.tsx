@@ -50,6 +50,26 @@ const teamMembers = [
       email: "velumani@trivexa.com"
     }
   },
+  {
+    name: "MADAVAN",
+    role: "Chief Technical Officer (CTO)",
+    image: "/api/placeholder/300/300",
+    bio: "Powerful Information Security leader with 7+ years of experience in IT & security operations, ISO 27001, SOC 2, security audits, ITGC, and cyber risk management. Expert in VAPT, application security, and ISMS implementation, with a proven track record of enhancing compliance and minimizing security incidents across financial, banking, and enterprise sector projects.",
+    expertise: [
+      "ISMS",
+      "SOC 2 & ITGC Audits", 
+      "Risk Management",
+      "All Security Operations",
+      "Incident Handling",
+      "VAPT",
+      "Application Security",
+      "Infosec Trainer"
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/in/madavan-cto",
+      email: "madavan@trivexa.com"
+    }
+  },
 ]
 
 export default function TeamSection() {

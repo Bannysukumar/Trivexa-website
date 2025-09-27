@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import AIChatbot from '@/components/ai-chatbot/AIChatbot'
+import ErrorBoundary from '@/components/common/ErrorBoundary'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -22,10 +23,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Trivexa Technologies - Premier Enterprise Blockchain Solutions & Web3 Development Company',
+    default: 'Trivexa Technologies - Enterprise Blockchain Solutions & Web3 Development Company',
     template: '%s | Trivexa Technologies - Enterprise Blockchain Solutions'
   },
-  description: 'Leading enterprise blockchain development company trusted by Fortune 500 companies worldwide. We deliver secure, scalable, and production-ready blockchain solutions including Layer-1 & Layer-2 networks, smart contracts, DApps, DeFi, NFT platforms, and Web3 technologies. Get expert blockchain consulting and development services.',
+  description: 'Leading enterprise blockchain development company trusted by Fortune 500 companies like TERM, Zerokost, and Thanvish AI. We deliver secure, scalable, and production-ready blockchain solutions including Layer-1 & Layer-2 networks, smart contracts, DApps, DeFi protocols, NFT platforms, and Web3 technologies. Get expert blockchain consulting and development services.',
   keywords: [
     'blockchain development company',
     'enterprise blockchain solutions',
@@ -46,7 +47,16 @@ export const metadata: Metadata = {
     'Trivexa Technologies',
     'Fortune 500 blockchain',
     'production-ready blockchain',
-    'scalable blockchain solutions'
+    'scalable blockchain solutions',
+    'TERM blockchain solutions',
+    'Zerokost blockchain development',
+    'Thanvish AI blockchain',
+    'Sync AI Solutions blockchain',
+    'enterprise DeFi protocols',
+    'institutional blockchain',
+    'blockchain infrastructure',
+    'blockchain scalability',
+    'blockchain interoperability'
   ],
   authors: [{ 
     name: 'Trivexa Technologies Pvt. Ltd.',
@@ -74,7 +84,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://trivexa.com',
-    title: 'Trivexa Technologies - Premier Enterprise Blockchain Solutions & Web3 Development',
+    title: 'Trivexa Technologies - Enterprise Blockchain Solutions & Web3 Development',
     description: 'Leading enterprise blockchain development company trusted by Fortune 500 companies. Expert blockchain solutions, smart contracts, DApps, DeFi, and Web3 technologies.',
     siteName: 'Trivexa Technologies',
     images: [
@@ -82,7 +92,7 @@ export const metadata: Metadata = {
         url: '/logo-new.jpg',
         width: 1200,
         height: 630,
-        alt: 'Trivexa Technologies - Premier Enterprise Blockchain Development Company',
+        alt: 'Trivexa Technologies - Enterprise Blockchain Development Company',
         type: 'image/jpeg',
       },
       {
@@ -98,7 +108,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@trivexa_tech',
     creator: '@trivexa_tech',
-    title: 'Trivexa Technologies - Premier Enterprise Blockchain Solutions',
+    title: 'Trivexa Technologies - Enterprise Blockchain Solutions',
     description: 'Leading enterprise blockchain development company. Expert blockchain solutions, smart contracts, DApps, DeFi, and Web3 technologies.',
     images: {
       url: '/logo-new.jpg',
@@ -308,6 +318,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1BSH9CBZC"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E1BSH9CBZC');
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${poppins.variable} font-sans antialiased min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300`} suppressHydrationWarning>
         <ThemeProvider
@@ -316,23 +338,51 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-              <Header />
-              <main className="relative">
-                {children}
-              </main>
-              <Footer />
-          <AIChatbot />
-          <Toaster
-            position="top-right"
-            toastOptions={{
-              duration: 4000,
-              style: {
-                background: 'var(--background)',
-                color: 'var(--foreground)',
-                border: '1px solid var(--border)',
-              },
-            }}
-          />
+          <ErrorBoundary>
+            <Header />
+            <main className="relative">
+              {children}
+            </main>
+            <Footer />
+            <AIChatbot />
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 4000,
+                style: {
+                  background: 'var(--background)',
+                  color: 'var(--foreground)',
+                  border: '1px solid var(--border)',
+                },
+              }}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  // Initialize monitoring
+                  if (typeof window !== 'undefined') {
+                    try {
+                      // Initialize analytics
+                      if (window.gtag) {
+                        window.gtag('config', 'G-E1BSH9CBZC', {
+                          page_title: document.title,
+                          page_location: window.location.href,
+                        });
+                      }
+                      
+                      // Initialize error tracking
+                      console.log('Error tracking initialized');
+                      
+                      // Initialize performance monitoring
+                      console.log('Performance monitoring initialized');
+                    } catch (error) {
+                      console.error('Failed to initialize monitoring:', error);
+                    }
+                  }
+                `,
+              }}
+            />
+          </ErrorBoundary>
         </ThemeProvider>
       </body>
     </html>

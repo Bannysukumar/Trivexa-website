@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import HeroSection from '@/components/home/HeroSection'
 
 export const metadata: Metadata = {
-  title: 'Premier Enterprise Blockchain Solutions & Web3 Development Company',
+  title: 'Trivexa Technologies - Enterprise Blockchain Solutions & Web3 Development Company',
   description: 'Leading enterprise blockchain development company trusted by Fortune 500 companies worldwide. Expert blockchain solutions, smart contracts, DApps, DeFi, NFT platforms, and Web3 technologies.',
 }
 

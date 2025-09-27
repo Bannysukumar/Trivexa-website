@@ -1,8 +1,8 @@
-# 🚀 Trivexa Technologies - Professional Blockchain Development Website
+# Trivexa Technologies - Enterprise Blockchain Solutions Website
 
-A complete, modern, and professional website for Trivexa Technologies Pvt. Ltd., a leading blockchain development company specializing in Layer-1 & Layer-2 blockchain solutions, smart contracts, DApps, and Web3 technologies.
+A modern, professional website for Trivexa Technologies Pvt. Ltd., a leading blockchain development company specializing in Layer-1 & Layer-2 blockchain solutions, smart contracts, DApps, and Web3 technologies.
 
-## ✨ Features
+## 🚀 Features
 
 ### 🎨 Design & UI/UX
 - **Modern, Premium Corporate Design** with blockchain & futuristic visuals
@@ -62,7 +62,8 @@ A complete, modern, and professional website for Trivexa Technologies Pvt. Ltd.,
 - Blog & Insights
 - Careers
 - Contact Us
-- FAQ
+- Privacy Policy, Terms of Service, Cookie Policy
+- Transparency & Security
 
 ### 🔍 SEO & Performance
 - **Comprehensive SEO Setup** with meta tags, Open Graph, and Twitter Cards
@@ -71,13 +72,6 @@ A complete, modern, and professional website for Trivexa Technologies Pvt. Ltd.,
 - **Optimized Images** and lazy loading
 - **Fast Loading Speed** with Next.js optimizations
 - **Mobile-First Design** for better mobile SEO
-
-### 🎯 AI Optimization (AIO)
-- **Structured FAQ Content** for AI search visibility
-- **JSON-LD Schema Markup** for services and organization
-- **Clear Content Hierarchy** with proper heading structure
-- **Keyword-Optimized Content** for blockchain-related searches
-- **Authority Signals** ready for integration
 
 ## 🚀 Getting Started
 
@@ -124,6 +118,18 @@ npm start
 trivexa-technologies-website/
 ├── app/                          # Next.js App Router
 │   ├── about/                   # About page
+│   ├── admin/                   # Admin dashboard
+│   ├── ai-training/             # AI training system
+│   ├── blog/                    # Blog pages
+│   ├── careers/                 # Careers page
+│   ├── contact/                 # Contact page
+│   ├── industries/              # Industry pages
+│   ├── portfolio/               # Portfolio pages
+│   ├── services/                # Service pages
+│   ├── privacy/                 # Privacy policy
+│   ├── terms/                   # Terms of service
+│   ├── cookies/                 # Cookie policy
+│   ├── transparency/            # Security transparency
 │   ├── globals.css              # Global styles
 │   ├── layout.tsx               # Root layout
 │   ├── page.tsx                 # Home page
@@ -131,15 +137,29 @@ trivexa-technologies-website/
 │   └── sitemap.ts               # Sitemap
 ├── components/                   # React components
 │   ├── about/                   # About page components
+│   ├── admin/                   # Admin components
 │   ├── ai-chatbot/              # AI chatbot components
+│   ├── ai-demo/                 # AI demo components
+│   ├── blog/                    # Blog components
+│   ├── careers/                 # Careers components
+│   ├── common/                  # Shared components
+│   ├── contact/                 # Contact components
 │   ├── home/                    # Home page components
 │   ├── layout/                  # Layout components (Header, Footer)
+│   ├── portfolio/               # Portfolio components
+│   ├── seo/                     # SEO components
+│   ├── services/                # Service components
+│   ├── ui/                      # UI components
 │   └── theme-provider.tsx       # Theme provider
 ├── lib/                         # Utility functions
+│   ├── ai-training-data.ts      # AI training data
+│   ├── ai-training-system.ts    # AI training system
+│   ├── ai-test-demo.ts          # AI demo utilities
+│   ├── firebase.ts              # Firebase configuration
+│   ├── firebase-utils.ts        # Firebase utilities
 │   └── utils.ts                 # Common utilities
 ├── public/                      # Static assets
-├── styles/                      # Additional styles
-├── types/                       # TypeScript type definitions
+├── __tests__/                   # Test files
 ├── next.config.js               # Next.js configuration
 ├── tailwind.config.js           # Tailwind CSS configuration
 ├── tsconfig.json                # TypeScript configuration
@@ -158,7 +178,7 @@ The website uses a custom color palette defined in `tailwind.config.js`:
 - **Company Information**: Update in `app/layout.tsx` metadata
 - **Services**: Modify service data in respective components
 - **Team Members**: Update in `components/about/TeamSection.tsx`
-- **Case Studies**: Update in `components/home/CaseStudiesPreview.tsx`
+- **Case Studies**: Update in `components/portfolio/PortfolioGrid.tsx`
 
 ### SEO Configuration
 - **Meta Tags**: Update in `app/layout.tsx`
@@ -171,9 +191,16 @@ The website uses a custom color palette defined in `tailwind.config.js`:
 Create a `.env.local` file for environment-specific configurations:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://trivexa.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-CONTACT_EMAIL=hello@trivexa.com
+# Firebase Configuration (if using Firebase features)
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+
+# Analytics
+NEXT_PUBLIC_GA_ID=your_google_analytics_id
 ```
 
 ### Contact Form Integration
@@ -206,26 +233,62 @@ The site is optimized for:
 - **AWS Amplify**: Full-stack deployment
 - **DigitalOcean App Platform**: Simple deployment
 
-## 📈 SEO Checklist
+## 🧪 Testing
 
-- ✅ Meta titles and descriptions
-- ✅ Open Graph and Twitter Cards
-- ✅ Sitemap.xml and robots.txt
-- ✅ Schema markup ready
-- ✅ Mobile-responsive design
-- ✅ Fast loading speed
-- ✅ Clean URL structure
-- ✅ Internal linking strategy
+### Run Tests
+```bash
+# Run all tests
+npm test
 
-## 🤝 Support
+# Run tests in watch mode
+npm run test:watch
 
-For support and customization requests:
-- **Email**: hello@trivexa.com
-- **Website**: [trivexa.com](https://trivexa.com)
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests for CI
+npm run test:ci
+```
+
+### Test Coverage
+The project maintains a minimum test coverage of 70% for:
+- Branches
+- Functions
+- Lines
+- Statements
+
+## 📈 Performance Optimization
+
+- Images are automatically optimized by Next.js
+- Lazy loading is implemented for images
+- Animations are optimized for mobile devices
+- Bundle size is minimized through code splitting
+
+## 🛡️ Security
+
+- Security headers are configured in `next.config.js`
+- XSS protection is enabled
+- Content Security Policy is implemented
+- All external links use `rel="noopener noreferrer"`
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 📄 License
 
-This project is proprietary software developed for Trivexa Technologies Pvt. Ltd.
+This project is proprietary software owned by Trivexa Technologies Pvt. Ltd.
+
+## 🤝 Support
+
+For technical support or questions, please contact:
+- **Email**: hello@trivexa.com
+- **Phone**: +91-6301846681
+- **Website**: https://trivexa.com
 
 ---
 

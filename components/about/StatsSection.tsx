@@ -152,23 +152,25 @@ export default function StatsSection() {
             </p>
             
             {/* Client Logos */}
-            <div className="flex flex-wrap justify-center items-center gap-8">
-              {[
-                "TERM",
-                "Zerokost", 
-                "Thanvish AI",
-                "Sync AI Solutions"
-              ].map((client, i) => (
-                <div
-                  key={i}
-                  className="w-32 h-16 bg-gradient-to-r from-primary-50 to-navy-50 dark:from-primary-900/20 dark:to-navy-900/20 rounded-lg flex items-center justify-center border border-primary-200 dark:border-primary-800 hover:shadow-lg transition-all duration-300"
-                >
-                  <span className="text-primary-700 dark:text-primary-300 text-sm font-semibold">
-                    {client}
-                  </span>
-                </div>
-              ))}
+        <div className="flex flex-wrap justify-center items-center gap-8">
+          {[
+            { name: "TERM", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop&crop=center" },
+            { name: "Zerokost", logo: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=120&h=60&fit=crop&crop=center" },
+            { name: "Thanvish AI", logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=120&h=60&fit=crop&crop=center" },
+            { name: "Sync AI Solutions", logo: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=120&h=60&fit=crop&crop=center" }
+          ].map((client, i) => (
+            <div
+              key={i}
+              className="w-32 h-16 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 group"
+            >
+              <img 
+                src={client.logo} 
+                alt={`${client.name} logo`}
+                className="w-24 h-12 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
+          ))}
+        </div>
           </div>
         </motion.div>
       </div>

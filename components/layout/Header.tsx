@@ -138,7 +138,7 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled 
           ? "glass-effect shadow-2xl border-b border-white/20 dark:border-gray-700/30" 
           : "bg-transparent"
@@ -267,7 +267,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className="relative group z-40">
                 {item.children ? (
                   <motion.div
                     className="flex items-center space-x-2 cursor-pointer text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover-lift group relative z-10"
@@ -331,13 +331,14 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0, rotateX: 0 }}
                         exit={{ opacity: 0, y: 10, rotateX: -15 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute top-full left-0 mt-2 w-64 py-2"
+                        className="absolute top-full left-0 mt-2 w-64 py-2 z-50"
                         style={{
                           background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
                           backdropFilter: 'blur(20px)',
                           border: '1px solid rgba(255,255,255,0.2)',
                           borderRadius: '1rem',
-                          boxShadow: '0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)'
+                          boxShadow: '0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)',
+                          zIndex: 9999
                         }}
                         onMouseEnter={() => setActiveDropdown(item.name)}
                         onMouseLeave={() => setActiveDropdown(null)}
@@ -408,22 +409,55 @@ export default function Header() {
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary-500/20 to-navy-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.button>
 
-            {/* 3D CTA Button */}
+            {/* Premium CTA Button */}
             <motion.div
               whileHover={{ 
-                scale: 1.05, 
-                rotateY: 5
+                scale: 1.08, 
+                rotateY: 8,
+                rotateZ: 2
               }}
-              transition={{ duration: 0.2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
               style={{ transformStyle: 'preserve-3d' }}
+              className="hidden sm:block"
             >
               <a
                 href="https://wa.me/916301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20your%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:block btn-primary text-lg font-semibold relative z-10"
+                className="relative group overflow-hidden"
               >
-                Get Started
+                {/* Premium Button Container */}
+                <div className="relative px-8 py-4 bg-gradient-to-r from-primary-600 via-primary-700 to-navy-600 rounded-2xl shadow-2xl border border-primary-500/20">
+                  {/* Animated Background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-transparent to-navy-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Shimmer Effect */}
+                  <div className="absolute inset-0 -top-2 -left-2 w-0 h-0 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:w-full group-hover:h-full transition-all duration-700 ease-out"></div>
+                  
+                  {/* Button Content */}
+                  <div className="relative flex items-center space-x-3">
+                    <span className="text-white font-bold text-lg tracking-wide">
+                      Get Started
+                    </span>
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    <svg 
+                      className="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform duration-300" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                  
+                  {/* Premium Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-navy-600 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
+                  
+                  {/* Corner Accents */}
+                  <div className="absolute top-0 right-0 w-3 h-3 bg-white/20 rounded-bl-2xl"></div>
+                  <div className="absolute bottom-0 left-0 w-3 h-3 bg-white/20 rounded-tr-2xl"></div>
+                </div>
               </a>
             </motion.div>
 

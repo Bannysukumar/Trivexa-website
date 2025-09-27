@@ -21,6 +21,7 @@ import {
   Shield
 } from 'lucide-react'
 import PortfolioFilter from './PortfolioFilter'
+import LazyImage from '../common/LazyImage'
 
 const projects = [
   {
@@ -28,7 +29,7 @@ const projects = [
     title: "Enterprise DeFi Protocol",
     category: "defi",
     description: "Developed a comprehensive DeFi lending protocol for enterprise clients with advanced risk management, multi-asset support, and institutional-grade security features.",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop&crop=center",
     technologies: ["Solidity", "React", "Web3.js", "Chainlink", "OpenZeppelin"],
     results: [
       { metric: "TVL", value: "$25M+", icon: DollarSign },
@@ -40,15 +41,15 @@ const projects = [
     featured: true,
     client: "Fortune 500 Financial Services",
     auditStatus: "CertiK Audited",
-    demoUrl: "https://demo.trivexa.com/defi-protocol",
-    githubUrl: "https://github.com/trivexa-technologies/defi-protocol"
+    demoUrl: null,
+    githubUrl: null
   },
   {
     id: 2,
     title: "Enterprise NFT Platform",
     category: "nft",
     description: "Built a white-label NFT marketplace solution for enterprise clients with custom branding, advanced analytics, and compliance features.",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop&crop=center",
     technologies: ["Ethereum", "Next.js", "IPFS", "MetaMask", "OpenSea SDK"],
     results: [
       { metric: "NFTs Minted", value: "50K+", icon: Database },
@@ -60,15 +61,15 @@ const projects = [
     featured: true,
     client: "Global Media Company",
     auditStatus: "OpenZeppelin Audited",
-    demoUrl: "https://demo.trivexa.com/nft-platform",
-    githubUrl: "https://github.com/trivexa-technologies/nft-platform"
+    demoUrl: null,
+    githubUrl: null
   },
   {
     id: 3,
     title: "Pharmaceutical Supply Chain",
     category: "smart-contracts",
     description: "Implemented a blockchain-based supply chain tracking system for pharmaceutical companies ensuring product authenticity and regulatory compliance.",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop&crop=center",
     technologies: ["Hyperledger Fabric", "React", "Node.js", "MongoDB", "IoT"],
     results: [
       { metric: "Products Tracked", value: "500K+", icon: Database },
@@ -80,15 +81,15 @@ const projects = [
     featured: false,
     client: "Leading Pharma Company",
     auditStatus: "ConsenSys Audited",
-    demoUrl: "https://demo.trivexa.com/supply-chain",
-    githubUrl: "https://github.com/trivexa-technologies/supply-chain"
+    demoUrl: null,
+    githubUrl: null
   },
   {
     id: 4,
     title: "Enterprise Gaming Platform",
     category: "dapps",
     description: "Created a play-to-earn gaming platform with enterprise features including tournament management, reward distribution, and analytics dashboard.",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop&crop=center",
     technologies: ["Unity", "Web3.js", "Solidity", "IPFS", "Chainlink VRF"],
     results: [
       { metric: "Active Players", value: "15K+", icon: Users },
@@ -100,15 +101,15 @@ const projects = [
     featured: false,
     client: "Gaming Studio Partner",
     auditStatus: "CertiK Audited",
-    demoUrl: "https://demo.trivexa.com/gaming-platform",
-    githubUrl: "https://github.com/trivexa-technologies/gaming-platform"
+    demoUrl: null,
+    githubUrl: null
   },
   {
     id: 5,
     title: "AI-Powered Trading System",
     category: "ai",
     description: "Developed an institutional-grade AI trading system with machine learning algorithms for automated cryptocurrency portfolio management.",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop&crop=center",
     technologies: ["Python", "TensorFlow", "Web3.js", "APIs", "Machine Learning"],
     results: [
       { metric: "Average ROI", value: "120%", icon: TrendingUp },
@@ -120,15 +121,15 @@ const projects = [
     featured: false,
     client: "Investment Firm",
     auditStatus: "Internal Security Review",
-    demoUrl: "https://demo.trivexa.com/ai-trading",
-    githubUrl: "https://github.com/trivexa-technologies/ai-trading"
+    demoUrl: null,
+    githubUrl: null
   },
   {
     id: 6,
     title: "Healthcare Data Platform",
     category: "smart-contracts",
     description: "Built a HIPAA-compliant healthcare records management system using blockchain for secure patient data sharing and interoperability.",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop&crop=center",
     technologies: ["Ethereum", "React", "IPFS", "Zero-Knowledge Proofs", "Encryption"],
     results: [
       { metric: "Patient Records", value: "250K+", icon: Database },
@@ -140,8 +141,8 @@ const projects = [
     featured: false,
     client: "Healthcare Network",
     auditStatus: "HIPAA Compliant",
-    demoUrl: "https://demo.trivexa.com/healthcare",
-    githubUrl: "https://github.com/trivexa-technologies/healthcare"
+    demoUrl: null,
+    githubUrl: null
   }
 ]
 
@@ -206,12 +207,16 @@ export default function PortfolioGrid() {
                     )}
 
                     {/* Image */}
-                    <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>
-                          {React.createElement(getCategoryIcon(project.category), { className: "w-8 h-8 text-white" })}
-                        </div>
-                      </div>
+                    <div className="relative h-48 overflow-hidden">
+                      <LazyImage
+                        src={project.image}
+                        alt={project.title}
+                        width={400}
+                        height={300}
+                        className="w-full h-full"
+                        priority={project.featured}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       {/* Category Badge */}
                       <div className="absolute top-4 right-4">
                         <span className="bg-white/90 dark:bg-gray-800/90 text-gray-900 dark:text-white px-3 py-1 rounded-full text-sm font-medium capitalize">
@@ -288,24 +293,28 @@ export default function PortfolioGrid() {
                           View Case Study
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center px-4 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 group-hover:shadow-lg"
-                          title="View Live Demo"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </Link>
-                        <Link
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center px-4 py-3 border-2 border-gray-600 text-gray-600 dark:text-gray-400 font-semibold rounded-lg hover:bg-gray-600 hover:text-white transition-all duration-300 group-hover:shadow-lg"
-                          title="View Source Code"
-                        >
-                          <Code className="w-4 h-4" />
-                        </Link>
+                        {project.demoUrl && (
+                          <Link
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 group-hover:shadow-lg"
+                            title="View Live Demo"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </Link>
+                        )}
+                        {project.githubUrl && (
+                          <Link
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-4 py-3 border-2 border-gray-600 text-gray-600 dark:text-gray-400 font-semibold rounded-lg hover:bg-gray-600 hover:text-white transition-all duration-300 group-hover:shadow-lg"
+                            title="View Source Code"
+                          >
+                            <Code className="w-4 h-4" />
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
