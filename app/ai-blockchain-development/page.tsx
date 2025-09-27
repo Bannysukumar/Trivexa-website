@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Script from 'next/script'
 import { 
   Brain, 
   Code, 
@@ -15,7 +15,6 @@ import {
   Cpu,
   Network
 } from 'lucide-react'
-import AIBlockchainStructuredData from '@/components/seo/AIBlockchainStructuredData'
 
 export const metadata: Metadata = {
   title: 'AI Blockchain Development Services | ChatGPT Integration | Trivexa Technologies',
@@ -123,21 +122,36 @@ export default function AIBlockchainDevelopmentPage() {
 
   return (
     <>
-      <AIBlockchainStructuredData />
+      <Script
+        id="ai-blockchain-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "AI Blockchain Development Services",
+            "description": "Expert AI blockchain development services with ChatGPT integration. Automated smart contracts, AI-powered DApps, intelligent Web3 solutions, and AI blockchain consulting for enterprises.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Trivexa Technologies",
+              "url": "https://trivexa.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "description": "AI blockchain development services for enterprises and startups"
+            }
+          })
+        }}
+      />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="inline-flex items-center space-x-2 glass-effect text-primary-700 dark:text-primary-300 px-6 py-3 rounded-full text-sm font-semibold mb-8"
-            >
+            <div className="inline-flex items-center space-x-2 glass-effect text-primary-700 dark:text-primary-300 px-6 py-3 rounded-full text-sm font-semibold mb-8">
               <Sparkles className="w-4 h-4" />
               <span>Leading AI Blockchain Development Company</span>
-            </motion.div>
+            </div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
               AI-Powered{' '}
