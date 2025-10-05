@@ -48,7 +48,7 @@ const blogPosts = [
     featured: false,
     externalLinks: [
       { title: "Featured on CertiK Blog", url: "https://certik.com/blog/smart-contract-security" },
-      { title: "Discussed on Twitter", url: "https://twitter.com/trivexa_tech/status/1234567890" }
+      { title: "Follow on Instagram", url: "https://www.instagram.com/trivexatechnologies/" }
     ],
     verified: true
   },

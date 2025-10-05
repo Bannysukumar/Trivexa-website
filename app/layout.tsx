@@ -196,7 +196,7 @@ export default function RootLayout({
           "availableLanguage": "English"
         },
         "sameAs": [
-          "https://twitter.com/trivexa_tech",
+          "https://www.instagram.com/trivexatechnologies/",
           "https://www.linkedin.com/company/trivexa-technologies-private-limited/",
           "https://github.com/trivexa-technologies"
         ],

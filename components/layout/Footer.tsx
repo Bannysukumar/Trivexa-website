@@ -9,7 +9,7 @@ import {
   Phone, 
   MapPin, 
   Linkedin, 
-  Twitter, 
+  Instagram,
   Github, 
   Youtube,
   Play,
@@ -96,11 +96,11 @@ const socialLinks = [
     rotationSpeed: 12
   },
   { 
-    name: 'Twitter', 
-    href: 'https://twitter.com/trivexa_tech', 
-    icon: Twitter,
-    color: 'from-sky-500 to-sky-600',
-    bgGradient: 'from-sky-50 to-sky-100 dark:from-sky-900/20 dark:to-sky-800/20',
+    name: 'Instagram', 
+    href: 'https://www.instagram.com/trivexatechnologies/', 
+    icon: Instagram,
+    color: 'from-pink-500 to-purple-600',
+    bgGradient: 'from-pink-50 to-purple-100 dark:from-pink-900/20 dark:to-purple-800/20',
     floatingIcons: [MessageCircle, Activity, TrendingUp, Target],
     rotationSpeed: 15
   },

@@ -12,7 +12,7 @@ export default function AIBlockchainStructuredData() {
     "logo": "https://trivexa.com/logo.png",
     "sameAs": [
       "https://www.linkedin.com/company/trivexa-technologies",
-      "https://twitter.com/trivexa_tech"
+      "https://www.instagram.com/trivexatechnologies/"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
