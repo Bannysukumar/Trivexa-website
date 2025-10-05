@@ -245,13 +245,13 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-white mb-3">Company Registration</h4>
               <div className="space-y-2 text-sm text-gray-300">
                 <div>
-                  <span className="font-medium">CIN:</span> U72900KA2020PTC123456
+                  <span className="font-medium">CIN:</span> U62013TN2025PTC185119
                 </div>
                 <div>
                   <span className="font-medium">GST:</span> 29ABCDE1234F1Z5
                 </div>
                 <div>
-                  <span className="font-medium">Incorporated:</span> January 15, 2020
+                  <span className="font-medium">Date of Incorporation:</span> 04/10/2025
                 </div>
               </div>
             </div>

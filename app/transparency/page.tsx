@@ -234,15 +234,15 @@ export default function TransparencyPage() {
                   </div>
                   <div>
                     <span className="font-medium text-gray-900 dark:text-white">Registration Number:</span>
-                    <p className="text-gray-600 dark:text-gray-300">U72900KA2020PTC123456</p>
+                    <p className="text-gray-600 dark:text-gray-300">U62013TN2025PTC185119</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-900 dark:text-white">GST Number:</span>
                     <p className="text-gray-600 dark:text-gray-300">29ABCDE1234F1Z5</p>
                   </div>
                   <div>
-                    <span className="font-medium text-gray-900 dark:text-white">Incorporation Date:</span>
-                    <p className="text-gray-600 dark:text-gray-300">January 15, 2020</p>
+                    <span className="font-medium text-gray-900 dark:text-white">Date of Incorporation:</span>
+                    <p className="text-gray-600 dark:text-gray-300">04/10/2025</p>
                   </div>
                 </div>
               </div>
