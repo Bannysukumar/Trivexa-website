@@ -445,7 +445,7 @@ export const contactInfo: TrainingDocument[] = [
     id: "contact-details",
     category: "contact",
     title: "Contact Information",
-    content: "You can reach Trivexa Technologies at hello@trivexa.com or +916301846681. We also have a contact form on our website. Our team typically responds within 24 hours. For urgent matters, you can reach us via WhatsApp.",
+    content: "You can reach Trivexa Technologies at trivexatechpvt@gmail.com or 6301846681. We also have a contact form on our website. Our team typically responds within 24 hours. For urgent matters, you can reach us via WhatsApp.",
     keywords: ["contact", "email", "phone", "whatsapp", "support"],
     metadata: {
       source: "contact-page",

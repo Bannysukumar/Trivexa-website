@@ -18,7 +18,7 @@ export default function ContactDetails() {
                 Phone
               </h4>
               <p className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
-                +1 (555) 123-4567
+                6301846681
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
                 24/7 Enterprise Support Line
@@ -35,7 +35,7 @@ export default function ContactDetails() {
                 Email
               </h4>
               <p className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
-                enterprise@trivexa.com
+                trivexatechpvt@gmail.com
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
                 Dedicated account managers

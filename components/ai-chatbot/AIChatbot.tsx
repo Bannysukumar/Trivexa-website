@@ -147,11 +147,11 @@ export default function AIChatbot() {
       }
       
       if (lowerInput.includes('contact') || lowerInput.includes('reach') || lowerInput.includes('get in touch')) {
-        return "You can reach us at hello@trivexa.com or +916301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?"
+        return "You can reach us at trivexatechpvt@gmail.com or 6301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?"
       }
 
       // Default response
-      return "I understand you're interested in our blockchain development services. While I can provide general information, for detailed technical discussions and project-specific queries, I recommend connecting with our expert team. You can reach us at hello@trivexa.com or schedule a consultation. Is there anything specific about blockchain development I can help clarify?"
+      return "I understand you're interested in our blockchain development services. While I can provide general information, for detailed technical discussions and project-specific queries, I recommend connecting with our expert team. You can reach us at trivexatechpvt@gmail.com or schedule a consultation. Is there anything specific about blockchain development I can help clarify?"
     }
   }
 

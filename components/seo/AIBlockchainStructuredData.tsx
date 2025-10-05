@@ -7,7 +7,7 @@ export default function AIBlockchainStructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Trivexa Technologies",
-    "description": "Leading AI blockchain development company offering ChatGPT-powered blockchain solutions, AI smart contracts, automated DApp development, and AI-driven Web3 technologies.",
+    "description": "Leading AI blockchain development company offering AI-powered blockchain solutions, AI smart contracts, automated DApp development, and AI-driven Web3 technologies.",
     "url": "https://trivexa.com",
     "logo": "https://trivexa.com/logo.png",
     "sameAs": [
@@ -16,7 +16,7 @@ export default function AIBlockchainStructuredData() {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-6301846681",
+      "telephone": "6301846681",
       "contactType": "customer service",
       "availableLanguage": "English"
     },
@@ -29,7 +29,7 @@ export default function AIBlockchainStructuredData() {
       {
         "@type": "Service",
         "name": "AI Blockchain Development",
-        "description": "AI-powered blockchain development services with ChatGPT integration for automated smart contracts, intelligent DApps, and AI-driven Web3 solutions.",
+        "description": "AI-powered blockchain development services with AI integration for automated smart contracts, intelligent DApps, and AI-driven Web3 solutions.",
         "provider": {
           "@type": "Organization",
           "name": "Trivexa Technologies"
@@ -41,8 +41,8 @@ export default function AIBlockchainStructuredData() {
       },
       {
         "@type": "Service",
-        "name": "ChatGPT Blockchain Integration",
-        "description": "ChatGPT integration services for blockchain development, enabling natural language to code conversion and automated smart contract generation.",
+        "name": "AI Blockchain Integration",
+        "description": "AI integration services for blockchain development, enabling natural language to code conversion and automated smart contract generation.",
         "provider": {
           "@type": "Organization",
           "name": "Trivexa Technologies"
@@ -83,8 +83,8 @@ export default function AIBlockchainStructuredData() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "ChatGPT Integration Services",
-            "description": "Custom ChatGPT integration for blockchain development workflows"
+            "name": "AI Integration Services",
+            "description": "Custom AI integration for blockchain development workflows"
           }
         },
         {
@@ -116,15 +116,15 @@ export default function AIBlockchainStructuredData() {
         "name": "What is AI blockchain development?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI blockchain development is the integration of artificial intelligence technologies, particularly ChatGPT and machine learning models, with blockchain development processes. This includes automated smart contract generation, AI-powered code optimization, intelligent DApp development, and AI-driven Web3 solutions."
+          "text": "AI blockchain development is the integration of artificial intelligence technologies, particularly advanced language models and machine learning models, with blockchain development processes. This includes automated smart contract generation, AI-powered code optimization, intelligent DApp development, and AI-driven Web3 solutions."
         }
       },
       {
         "@type": "Question",
-        "name": "How does ChatGPT integrate with blockchain development?",
+        "name": "How does AI integrate with blockchain development?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ChatGPT integrates with blockchain development through natural language processing, enabling developers to generate smart contract code from natural language descriptions, automate debugging processes, optimize code performance, and create intelligent user interfaces for DApps."
+          "text": "AI integrates with blockchain development through natural language processing, enabling developers to generate smart contract code from natural language descriptions, automate debugging processes, optimize code performance, and create intelligent user interfaces for DApps."
         }
       },
       {
@@ -140,7 +140,7 @@ export default function AIBlockchainStructuredData() {
         "name": "What AI technologies are used in blockchain development?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Key AI technologies used in blockchain development include ChatGPT API integration, OpenAI GPT models, machine learning frameworks, natural language processing, AI blockchain analytics, automated code generation, AI security protocols, and intelligent testing systems."
+          "text": "Key AI technologies used in blockchain development include AI API integration, OpenAI GPT models, machine learning frameworks, natural language processing, AI blockchain analytics, automated code generation, AI security protocols, and intelligent testing systems."
         }
       },
       {
@@ -148,7 +148,7 @@ export default function AIBlockchainStructuredData() {
         "name": "How can I start an AI blockchain development project?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To start an AI blockchain development project, contact Trivexa Technologies for a consultation. We provide comprehensive AI blockchain development services including ChatGPT integration, AI smart contract development, intelligent DApp creation, and AI Web3 solutions tailored to your specific requirements."
+          "text": "To start an AI blockchain development project, contact Trivexa Technologies for a consultation. We provide comprehensive AI blockchain development services including AI integration, AI smart contract development, intelligent DApp creation, and AI Web3 solutions tailored to your specific requirements."
         }
       }
     ]

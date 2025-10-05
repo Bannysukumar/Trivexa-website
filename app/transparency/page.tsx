@@ -255,11 +255,11 @@ export default function TransparencyPage() {
                 <div className="space-y-4">
                   <div>
                     <span className="font-medium text-gray-900 dark:text-white">Email:</span>
-                    <p className="text-gray-600 dark:text-gray-300">hello@trivexa.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">trivexatechpvt@gmail.com</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-900 dark:text-white">Phone:</span>
-                    <p className="text-gray-600 dark:text-gray-300">+91-6301846681</p>
+                    <p className="text-gray-600 dark:text-gray-300">6301846681</p>
                   </div>
                   <div>
                     <span className="font-medium text-gray-900 dark:text-white">Address:</span>

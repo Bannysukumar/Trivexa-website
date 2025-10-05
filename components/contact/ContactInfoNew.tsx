@@ -19,13 +19,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+916301846681"],
+    details: ["6301846681"],
     description: "Call us for immediate assistance"
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["hello@trivexa.com", "support@trivexa.com"],
+    details: ["trivexatechpvt@gmail.com", "trivexatechpvt@gmail.com"],
     description: "Send us your project details"
   },
   {

@@ -82,9 +82,9 @@ export const organizationData = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+916301846681",
+    telephone: "6301846681",
     contactType: "customer service",
-    email: "enterprise@trivexa.com",
+    email: "trivexatechpvt@gmail.com",
     availableLanguage: "English"
   },
   sameAs: [

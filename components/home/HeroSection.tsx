@@ -232,7 +232,7 @@ export default function HeroSection() {
             >
               AI-Powered{' '}
               <span className="gradient-text animate-glow">Blockchain Development</span>{' '}
-              with ChatGPT Integration
+              with AI Integration
             </motion.h1>
 
             {/* Premium Subtitle */}
@@ -242,7 +242,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-3xl font-medium"
             >
-              Trivexa Technologies is the leading AI blockchain development company, integrating ChatGPT 
+              Trivexa Technologies is the leading AI blockchain development company, integrating AI 
               and advanced AI technologies for automated smart contract development, AI-powered DApps, 
               and intelligent Web3 solutions. Serving Fortune 500 companies with 100+ AI-driven projects.
             </motion.p>
@@ -255,7 +255,7 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-6 mb-12"
             >
               <a
-                href="https://wa.me/916301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20starting%20a%20blockchain%20project.%20Can%20you%20help%20me%20get%20started?"
+                href="https://wa.me/6301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20starting%20a%20blockchain%20project.%20Can%20you%20help%20me%20get%20started?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center group text-lg font-semibold"

@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import HeroSection from '@/components/home/HeroSection'
 
 export const metadata: Metadata = {
-  title: 'AI Blockchain Development Company | ChatGPT for Blockchain | Trivexa Technologies',
-  description: 'Leading AI blockchain development company offering ChatGPT-powered blockchain solutions, AI smart contracts, automated DApp development, and AI-driven Web3 technologies. Trusted by Fortune 500 companies.',
+  title: 'AI Blockchain Development Company | AI for Blockchain | Trivexa Technologies',
+  description: 'Leading AI blockchain development company offering AI-powered blockchain solutions, AI smart contracts, automated DApp development, and AI-driven Web3 technologies. Trusted by Fortune 500 companies.',
   keywords: [
     'AI blockchain development',
-    'ChatGPT blockchain development',
+    'AI blockchain development',
     'AI smart contracts',
     'AI blockchain solutions',
     'AI Web3 development',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'AI blockchain consulting',
     'automated blockchain development',
     'AI blockchain tools',
-    'ChatGPT for blockchain',
+    'AI for blockchain',
     'AI blockchain programming',
     'AI blockchain automation',
     'AI blockchain services',

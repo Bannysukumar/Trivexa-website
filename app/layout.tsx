@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'react-hot-toast'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import AIChatbot from '@/components/ai-chatbot/AIChatbot'
+import MultiLanguageAIChatbot from '@/components/ai-chatbot/MultiLanguageAIChatbot'
 import ErrorBoundary from '@/components/common/ErrorBoundary'
 
 const inter = Inter({ 
@@ -190,9 +190,9 @@ export default function RootLayout({
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+916301846681",
+          "telephone": "6301846681",
           "contactType": "customer service",
-          "email": "enterprise@trivexa.com",
+          "email": "trivexatechpvt@gmail.com",
           "availableLanguage": "English"
         },
         "sameAs": [
@@ -344,7 +344,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-            <AIChatbot />
+            <MultiLanguageAIChatbot />
             <Toaster
               position="top-right"
               toastOptions={{

@@ -422,7 +422,7 @@ export default function Header() {
               className="hidden sm:block"
             >
               <a
-                href="https://wa.me/916301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20your%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
+                href="https://wa.me/6301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20your%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group overflow-hidden"

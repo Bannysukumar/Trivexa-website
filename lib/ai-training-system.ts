@@ -249,14 +249,14 @@ class TrivexaAITrainingSystem {
     }
 
     if (lowerQuery.includes('contact') || lowerQuery.includes('reach') || lowerQuery.includes('get in touch')) {
-      return "You can reach us at hello@trivexa.com or +916301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?"
+      return "You can reach us at trivexatechpvt@gmail.com or 6301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?"
     }
 
     if (lowerQuery.includes('blockchain') || lowerQuery.includes('web3') || lowerQuery.includes('defi')) {
       return "We specialize in comprehensive blockchain development including Layer-1 and Layer-2 solutions, smart contracts, DApps, DeFi protocols, and custom blockchain networks. Our services cover everything from initial concept to deployment and maintenance. Would you like to know more about any specific aspect?"
     }
 
-    return "I understand you're interested in our blockchain development services. While I can provide general information, for detailed technical discussions and project-specific queries, I recommend connecting with our expert team. You can reach us at hello@trivexa.com or schedule a consultation. Is there anything specific about blockchain development I can help clarify?"
+    return "I understand you're interested in our blockchain development services. While I can provide general information, for detailed technical discussions and project-specific queries, I recommend connecting with our expert team. You can reach us at trivexatechpvt@gmail.com or schedule a consultation. Is there anything specific about blockchain development I can help clarify?"
   }
 
   // Get related questions for a category

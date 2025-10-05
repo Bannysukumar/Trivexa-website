@@ -152,10 +152,10 @@ export default function PrivacyPolicy() {
                   <strong>Trivexa Technologies Pvt. Ltd.</strong>
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">
-                  Email: privacy@trivexa.com
+                  Email: trivexatechpvt@gmail.com
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">
-                  Phone: +91-6301846681
+                  Phone: 6301846681
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Address: India (Global Clientele)

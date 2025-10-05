@@ -224,14 +224,14 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
-                <a href="mailto:hello@trivexa.com" className="text-gray-300 hover:text-primary-400 transition-colors">
-                  hello@trivexa.com
+                <a href="mailto:trivexatechpvt@gmail.com" className="text-gray-300 hover:text-primary-400 transition-colors">
+                  trivexatechpvt@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400" />
-                <a href="tel:+916301846681" className="text-gray-300 hover:text-primary-400 transition-colors">
-                  +91-6301846681
+                <a href="tel:6301846681" className="text-gray-300 hover:text-primary-400 transition-colors">
+                  6301846681
                 </a>
               </div>
               <div className="flex items-center space-x-3">

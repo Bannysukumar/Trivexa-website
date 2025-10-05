@@ -53,15 +53,15 @@ const contactMethods = [
     icon: Phone,
     title: "Call Us",
     description: "Speak directly with our experts",
-    action: "+916301846681",
-    href: "tel:+916301846681"
+    action: "6301846681",
+    href: "tel:6301846681"
   },
   {
     icon: Mail,
     title: "Email Us",
     description: "Send us your project details",
-    action: "hello@trivexa.com",
-    href: "mailto:hello@trivexa.com"
+    action: "trivexatechpvt@gmail.com",
+    href: "mailto:trivexatechpvt@gmail.com"
   }
 ]
 

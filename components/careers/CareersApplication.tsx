@@ -303,7 +303,7 @@ export default function CareersApplication() {
               <div className="space-y-2">
                 <div className="flex items-center text-gray-700 dark:text-gray-300">
                   <Mail className="w-4 h-4 mr-2 text-primary-600" />
-                  careers@trivexa.com
+                  trivexatechpvt@gmail.com
                 </div>
                 <div className="flex items-center text-gray-700 dark:text-gray-300">
                   <MessageSquare className="w-4 h-4 mr-2 text-primary-600" />

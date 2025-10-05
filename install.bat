@@ -23,8 +23,8 @@ echo ⚙️ Creating environment file...
 echo # Trivexa Technologies Website Environment Variables
 echo NEXT_PUBLIC_SITE_URL=http://localhost:3000
 echo NEXT_PUBLIC_GA_ID=your-google-analytics-id
-echo CONTACT_EMAIL=hello@trivexa.com
-echo CONTACT_PHONE=+91-9876543210
+echo CONTACT_EMAIL=trivexatechpvt@gmail.com
+echo CONTACT_PHONE=6301846681
 echo.
 echo # Add your API keys and other environment variables here
 echo # EMAIL_SERVICE_API_KEY=your-email-service-key

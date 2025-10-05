@@ -17,18 +17,18 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AI Blockchain Development Services | ChatGPT Integration | Trivexa Technologies',
-  description: 'Expert AI blockchain development services with ChatGPT integration. Automated smart contracts, AI-powered DApps, intelligent Web3 solutions, and AI blockchain consulting for enterprises.',
+  title: 'AI Blockchain Development Services | AI Integration | Trivexa Technologies',
+  description: 'Expert AI blockchain development services with AI integration. Automated smart contracts, AI-powered DApps, intelligent Web3 solutions, and AI blockchain consulting for enterprises.',
   keywords: [
     'AI blockchain development services',
-    'ChatGPT blockchain integration',
+    'AI blockchain integration',
     'AI smart contract development',
     'AI blockchain consulting',
     'automated blockchain development',
     'AI Web3 development',
     'AI blockchain programming',
     'AI blockchain automation',
-    'ChatGPT for blockchain development',
+    'AI for blockchain development',
     'AI blockchain solutions',
     'AI blockchain tools',
     'AI blockchain development company',
@@ -43,9 +43,9 @@ export default function AIBlockchainDevelopmentPage() {
     {
       icon: Brain,
       title: 'AI-Powered Smart Contract Development',
-      description: 'Automated smart contract generation using ChatGPT and advanced AI models for faster, more secure, and error-free development.',
+      description: 'Automated smart contract generation using AI and advanced AI models for faster, more secure, and error-free development.',
       features: [
-        'ChatGPT-integrated smart contract coding',
+        'AI-integrated smart contract coding',
         'AI-powered code review and optimization',
         'Automated testing and security analysis',
         'Natural language to Solidity conversion'
@@ -105,12 +105,12 @@ export default function AIBlockchainDevelopmentPage() {
     {
       icon: Users,
       title: 'Expert AI Integration',
-      description: 'Seamless ChatGPT and AI model integration for optimal performance'
+      description: 'Seamless AI and AI model integration for optimal performance'
     }
   ]
 
   const technologies = [
-    'ChatGPT Integration',
+    'AI Integration',
     'OpenAI API',
     'Machine Learning Models',
     'Natural Language Processing',
@@ -130,7 +130,7 @@ export default function AIBlockchainDevelopmentPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "AI Blockchain Development Services",
-            "description": "Expert AI blockchain development services with ChatGPT integration. Automated smart contracts, AI-powered DApps, intelligent Web3 solutions, and AI blockchain consulting for enterprises.",
+            "description": "Expert AI blockchain development services with AI integration. Automated smart contracts, AI-powered DApps, intelligent Web3 solutions, and AI blockchain consulting for enterprises.",
             "provider": {
               "@type": "Organization",
               "name": "Trivexa Technologies",
@@ -156,18 +156,18 @@ export default function AIBlockchainDevelopmentPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
               AI-Powered{' '}
               <span className="gradient-text">Blockchain Development</span>{' '}
-              with ChatGPT Integration
+              with AI Integration
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed">
               Transform your blockchain development with cutting-edge AI technologies. 
-              Our ChatGPT-integrated solutions deliver automated smart contracts, 
+              Our AI-integrated solutions deliver automated smart contracts, 
               intelligent DApps, and AI-driven Web3 platforms.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href="https://wa.me/916301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20AI%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
+                href="https://wa.me/6301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20AI%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center group text-lg font-semibold"
@@ -291,11 +291,11 @@ export default function AIBlockchainDevelopmentPage() {
           </h2>
           <p className="text-xl text-primary-100 mb-12 max-w-3xl mx-auto">
             Join Fortune 500 companies who trust Trivexa Technologies for AI-powered 
-            blockchain development. Get started with ChatGPT integration today.
+            blockchain development. Get started with AI integration today.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="https://wa.me/916301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20AI%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
+              href="https://wa.me/6301846681?text=Hi%20Trivexa%20Technologies!%20I'm%20interested%20in%20AI%20blockchain%20development%20services.%20Can%20you%20help%20me%20get%20started?"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group"
