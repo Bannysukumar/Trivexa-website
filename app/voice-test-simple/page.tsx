@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Mic, MicOff, Volume2 } from 'lucide-react'
 
 export default function VoiceTestSimplePage() {
@@ -9,10 +9,12 @@ export default function VoiceTestSimplePage() {
   const [isSupported, setIsSupported] = useState(false)
 
   // Check if Web Speech API is supported
-  useState(() => {
-    const hasSpeechRecognition = 'webkitSpeechRecognition' in window || 'SpeechRecognition' in window
-    setIsSupported(hasSpeechRecognition)
-  })
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hasSpeechRecognition = 'webkitSpeechRecognition' in window || 'SpeechRecognition' in window
+      setIsSupported(hasSpeechRecognition)
+    }
+  }, [])
 
   const startRecording = () => {
     if (!isSupported) {
@@ -33,13 +35,13 @@ export default function VoiceTestSimplePage() {
       setIsRecording(true)
     }
     
-    recognition.onresult = (event) => {
+    recognition.onresult = (event: any) => {
       const transcript = event.results[0][0].transcript
       setTranscript(transcript)
       setIsRecording(false)
     }
     
-    recognition.onerror = (event) => {
+    recognition.onerror = (event: any) => {
       console.error('Speech recognition error:', event.error)
       setIsRecording(false)
       alert(`Speech recognition error: ${event.error}`)

@@ -15,7 +15,8 @@ import {
   Settings,
   Sparkles
 } from 'lucide-react'
-import { generateAIResponse, getTrainingStats, getAllServices, type AIResponse } from '@/lib/ai-training-system'
+import { getTrainingStats, getAllServices, type AIResponse } from '@/lib/ai-training-system'
+import { advancedAISystem } from '@/lib/advanced-ai-training-system'
 
 export default function AITrainingDemo() {
   const [query, setQuery] = useState('')
@@ -29,7 +30,7 @@ export default function AITrainingDemo() {
 
     setIsLoading(true)
     try {
-      const aiResponse = generateAIResponse(query)
+      const aiResponse = advancedAISystem.generateResponse(query, 'en', 'demo-session')
       setResponse(aiResponse)
     } catch (error) {
       console.error('Error generating response:', error)

@@ -18,7 +18,8 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { saveChatMessage, generateSessionId, type ChatMessage } from '@/lib/firebase-utils'
-import { generateAIResponse, getTrainingStats, type AIResponse } from '@/lib/ai-training-system'
+import { getTrainingStats, type AIResponse } from '@/lib/ai-training-system'
+import { advancedAISystem } from '@/lib/advanced-ai-training-system'
 
 interface Message {
   id: string
@@ -104,7 +105,7 @@ export default function EnhancedAIChatbot() {
     // Generate AI response using training system
     setTimeout(async () => {
       try {
-        const aiResponse: AIResponse = generateAIResponse(text.trim())
+        const aiResponse = advancedAISystem.generateResponse(text.trim(), 'en', sessionId)
         
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),

@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from 'react-hot-toast'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import MultiLanguageAIChatbot from '@/components/ai-chatbot/MultiLanguageAIChatbot'
 import ErrorBoundary from '@/components/common/ErrorBoundary'
+import ClientToaster from '@/components/common/ClientToaster'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -345,17 +345,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <MultiLanguageAIChatbot />
-            <Toaster
-              position="top-right"
-              toastOptions={{
-                duration: 4000,
-                style: {
-                  background: 'var(--background)',
-                  color: 'var(--foreground)',
-                  border: '1px solid var(--border)',
-                },
-              }}
-            />
+            <ClientToaster />
             <script
               dangerouslySetInnerHTML={{
                 __html: `

@@ -62,7 +62,7 @@ export default function VoiceTestPage() {
       }, 3000)
     } catch (error) {
       setIsRecording(false)
-      alert(`Microphone test failed: ${error.message}`)
+      alert(`Microphone test failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
 

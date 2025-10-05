@@ -123,7 +123,7 @@ class MultiLanguageTrivexaAITrainingSystem {
       return {
         answer: this.translateResponse(bestMatch.content, targetLanguage),
         confidence: 0.8,
-        sources: [bestMatch.source || 'Training Data'],
+        sources: ['Training Data'],
         category: bestMatch.category,
         relatedQuestions: this.getRelatedQuestions(bestMatch.category, targetLanguage),
         language: targetLanguage,
@@ -230,7 +230,7 @@ class MultiLanguageTrivexaAITrainingSystem {
   // Get service information
   private getServiceInfo(serviceType: string, language: Language) {
     const serviceInfo = this.servicesData.find(service => 
-      service.title && service.title.toLowerCase().includes(serviceType)
+      service.name && service.name.toLowerCase().includes(serviceType)
     )
 
     if (serviceInfo) {
@@ -281,11 +281,12 @@ class MultiLanguageTrivexaAITrainingSystem {
     }
 
     let translatedText = text
-    for (const [english, translations] of Object.entries(translations)) {
+    const translationEntries = Object.entries(translations)
+    for (const [english, translations] of translationEntries) {
       if (text.toLowerCase().includes(english.toLowerCase())) {
         translatedText = translatedText.replace(
           new RegExp(english, 'gi'),
-          translations[targetLanguage]
+          (translations as any)[targetLanguage]
         )
       }
     }

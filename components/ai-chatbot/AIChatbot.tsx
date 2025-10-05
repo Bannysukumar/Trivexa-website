@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { saveChatMessage, generateSessionId, type ChatMessage } from '@/lib/firebase-utils'
-import { generateAIResponse } from '@/lib/ai-training-system'
+import { advancedAISystem } from '@/lib/advanced-ai-training-system'
 
 interface Message {
   id: string
@@ -118,7 +118,7 @@ export default function AIChatbot() {
   const getBotResponse = (userInput: string): string => {
     try {
       // Use the enhanced AI training system
-      const aiResponse = generateAIResponse(userInput)
+      const aiResponse = advancedAISystem.generateResponse(userInput, 'en', sessionId)
       return aiResponse.answer
     } catch (error) {
       console.error('Error generating AI response:', error)

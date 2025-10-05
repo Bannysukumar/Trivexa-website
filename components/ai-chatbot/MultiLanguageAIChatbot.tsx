@@ -26,8 +26,8 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { saveChatMessage, generateSessionId, type ChatMessage } from '@/lib/firebase-utils'
-import { generateMultiLanguageAIResponse, type AIResponse } from '@/lib/multi-language-ai-system'
 import { getTrainingStats } from '@/lib/ai-training-system'
+import { advancedAISystem } from '@/lib/advanced-ai-training-system'
 
 interface Message {
   id: string
@@ -169,7 +169,7 @@ export default function MultiLanguageAIChatbot() {
         setIsRecording(true)
       }
       
-      recognition.onresult = (event) => {
+      recognition.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript
         setInputValue(transcript)
         setIsRecording(false)
@@ -189,7 +189,7 @@ export default function MultiLanguageAIChatbot() {
         setMessages(prev => [...prev, successMessage])
       }
       
-      recognition.onerror = (event) => {
+      recognition.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error)
         setIsRecording(false)
         
@@ -340,20 +340,21 @@ export default function MultiLanguageAIChatbot() {
       console.error('Failed to save user message:', error)
     }
 
-    // Generate AI response using training system
+    // Generate AI response using advanced training system
     setTimeout(async () => {
       try {
-        const aiResponse: AIResponse = generateMultiLanguageAIResponse(text.trim(), selectedLanguage)
+        // Use advanced AI system for better responses
+        const advancedResponse = advancedAISystem.generateResponse(text.trim(), selectedLanguage, sessionId)
         
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: aiResponse.answer,
+          text: advancedResponse.answer,
           sender: 'bot',
           timestamp: new Date(),
-          confidence: aiResponse.confidence,
-          sources: aiResponse.sources,
-          category: aiResponse.category,
-          relatedQuestions: aiResponse.relatedQuestions,
+          confidence: advancedResponse.confidence,
+          sources: advancedResponse.sources,
+          category: advancedResponse.category,
+          relatedQuestions: advancedResponse.relatedQuestions,
           language: selectedLanguage
         }
         
@@ -361,12 +362,12 @@ export default function MultiLanguageAIChatbot() {
         setIsTyping(false)
 
         // Auto-speak the response
-        speakText(aiResponse.answer)
+        speakText(advancedResponse.answer)
 
         // Save bot response to Firebase
         try {
           await saveChatMessage({
-            text: aiResponse.answer,
+            text: advancedResponse.answer,
             sender: 'bot',
             sessionId: sessionId
           })
