@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ Generate unique build ID each deploy — breaks old cache
+  // ✅ Unique build ID on every deploy to break cache
   generateBuildId: async () => {
     return Date.now().toString();
-  },
-
-  // ✅ Disable all static revalidation (forces rebuild for any change)
-  revalidate: 0,
-  onDemandEntries: {
-    maxInactiveAge: 0,
-    pagesBufferLength: 0,
   },
 
   // ✅ Image optimization
@@ -23,11 +16,11 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
 
-  // ✅ Compression & performance
+  // ✅ Compression and security
   compress: true,
   poweredByHeader: false,
 
-  // ✅ Security + Cache-Control headers
+  // ✅ Security & cache headers
   async headers() {
     return [
       {
@@ -38,7 +31,7 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
 
-          // 🔥 Disable caching permanently (browser + proxy + Next.js)
+          // 🔥 Disable caching globally (browser + CDN + proxy)
           { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
           { key: 'Pragma', value: 'no-cache' },
           { key: 'Expires', value: '0' },
@@ -47,7 +40,7 @@ const nextConfig = {
     ];
   },
 
-  // ✅ Redirects (example: if old domain should forward)
+  // ✅ Redirect old URLs to main domain (optional)
   async redirects() {
     return [
       {
@@ -58,13 +51,12 @@ const nextConfig = {
     ];
   },
 
-  // ✅ Experimental features (optional optimizations)
+  // ✅ Experimental (valid options only)
   experimental: {
-    optimizeCss: false,
-    turbo: false,
+    optimizeCss: false, // safe
   },
 
-  // ✅ Output standalone mode (for PM2/Nginx deployments)
+  // ✅ Output for PM2/Nginx standalone deployment
   output: 'standalone',
 };
 
