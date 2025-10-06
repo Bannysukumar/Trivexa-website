@@ -56,6 +56,12 @@ const nextConfig = {
     optimizeCss: false, // safe
   },
 
+  // ✅ Force all pages to be dynamic (disable ISR/SSG caching)
+  trailingSlash: false,
+  
+  // ✅ Disable static optimization completely
+  swcMinify: true,
+  
   // ✅ Output for PM2/Nginx standalone deployment
   output: 'standalone',
 };
