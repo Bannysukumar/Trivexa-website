@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import ServicesHero from '@/components/services/ServicesHero'
+
+export const dynamic = 'force-dynamic'
+
 import ServicesGrid from '@/components/services/ServicesGrid'
 import ServiceProcess from '@/components/services/ServiceProcess'
 import ServicePricing from '@/components/services/ServicePricing'

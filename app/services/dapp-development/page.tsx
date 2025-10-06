@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
 import ServiceHero from '@/components/services/individual/ServiceHero'
 import ServiceFeatures from '@/components/services/individual/ServiceFeatures'
 import ServiceProcess from '@/components/services/individual/ServiceProcess'

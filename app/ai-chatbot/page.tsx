@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
 import MultiLanguageAIChatbot from '@/components/ai-chatbot/MultiLanguageAIChatbot'
 
 export const metadata: Metadata = {

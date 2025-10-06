@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
 import { Mic, Volume2, Shield, Globe, CheckCircle, XCircle } from 'lucide-react'
 
 export const metadata: Metadata = {

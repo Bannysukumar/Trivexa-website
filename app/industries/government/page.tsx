@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
 import Link from 'next/link'
 import { ArrowLeft, Building, TrendingUp, Shield, Zap, CheckCircle, Users, Award } from 'lucide-react'
 

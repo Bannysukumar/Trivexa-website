@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+
+export const dynamic = 'force-dynamic'
 import { Mic, MicOff, Volume2 } from 'lucide-react'
 
 export default function VoiceTestSimplePage() {

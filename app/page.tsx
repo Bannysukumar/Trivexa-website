@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import HeroSection from '@/components/home/HeroSection'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'AI Blockchain Development Company | AI for Blockchain | Trivexa Technologies',
   description: 'Leading AI blockchain development company offering AI-powered blockchain solutions, AI smart contracts, automated DApp development, and AI-driven Web3 technologies. Trusted by Fortune 500 companies.',

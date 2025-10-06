@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import ContactHero from '@/components/contact/ContactHero'
+
+export const dynamic = 'force-dynamic'
+
 import ContactForm from '@/components/contact/ContactForm'
 import ContactDetails from '@/components/contact/ContactDetails'
 

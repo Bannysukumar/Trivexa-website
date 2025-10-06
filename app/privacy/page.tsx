@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Privacy Policy - Trivexa Technologies',
   description: 'Privacy Policy for Trivexa Technologies Pvt. Ltd. Learn how we collect, use, and protect your personal information.',

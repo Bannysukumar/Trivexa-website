@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import CareersHero from '@/components/careers/CareersHero'
+
+export const dynamic = 'force-dynamic'
+
 import CareersBenefits from '@/components/careers/CareersBenefits'
 import CareersOpenings from '@/components/careers/CareersOpenings'
 import CareersCulture from '@/components/careers/CareersCulture'

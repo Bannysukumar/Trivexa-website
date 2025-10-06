@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
 import AITrainingManager from '@/components/admin/AITrainingManager'
 import EnhancedAIChatbot from '@/components/ai-chatbot/EnhancedAIChatbot'
 import AITrainingDemo from '@/components/ai-demo/AITrainingDemo'

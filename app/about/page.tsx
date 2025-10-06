@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import AboutHero from '@/components/about/AboutHero'
+
+export const dynamic = 'force-dynamic'
+
 import OurStory from '@/components/about/OurStory'
 import TeamSection from '@/components/about/TeamSection'
 import ValuesSection from '@/components/about/ValuesSection'

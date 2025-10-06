@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogSearch from '@/components/blog/BlogSearch'
 import BlogCategories from '@/components/blog/BlogCategories'

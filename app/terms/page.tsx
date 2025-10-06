@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Terms of Service - Trivexa Technologies',
   description: 'Terms of Service for Trivexa Technologies Pvt. Ltd. Read our terms and conditions for using our blockchain development services.',
