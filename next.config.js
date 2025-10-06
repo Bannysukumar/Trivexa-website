@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Generate unique build ID for cache busting
+  generateBuildId: async () => {
+    return Date.now().toString(); // unique build ID per deploy
+  },
+  
   // Image optimization
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'trivexa.com', 'demo.trivexa.com'],
