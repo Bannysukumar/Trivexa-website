@@ -31,10 +31,12 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
 
-          // 🔥 Disable caching globally (browser + CDN + proxy)
-          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+          // 🔥 Disable ALL caching (browser + CDN + proxy + Next.js)
+          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate, max-age=0' },
           { key: 'Pragma', value: 'no-cache' },
           { key: 'Expires', value: '0' },
+          { key: 'Surrogate-Control', value: 'no-store' },
+          { key: 'X-Accel-Expires', value: '0' },
         ],
       },
     ];
@@ -54,6 +56,7 @@ const nextConfig = {
   // ✅ Experimental (valid options only)
   experimental: {
     optimizeCss: false, // safe
+    unstable_noStore: true, // Disable Next.js internal caching completely
   },
 
   // ✅ Force all pages to be dynamic (disable ISR/SSG caching)
