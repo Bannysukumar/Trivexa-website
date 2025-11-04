@@ -50,10 +50,14 @@ const navigation = [
     href: '/services',
     icon: Code,
     children: [
-      { name: 'Blockchain Development', href: '/services/layer1-blockchain' },
+      { name: 'Layer-1 Blockchain Development', href: '/services/layer1-blockchain' },
+      { name: 'Layer-2 Blockchain Solutions', href: '/services/layer2-blockchain' },
+      { name: 'Smart Contract Development', href: '/services/smart-contracts' },
+      { name: 'DApp Development', href: '/services/dapp-development' },
       { name: 'Web & Mobile Development', href: '/services/web-mobile-development' },
-      { name: 'DApps & Smart Contracts', href: '/services/smart-contracts' },
       { name: 'AI-Powered Solutions', href: '/services/ai-solutions' },
+      { name: 'Telegram Bots Development', href: '/services/telegram-bots' },
+      { name: 'AI Automation Services', href: '/services/ai-automation' },
     ]
   },
   { 
@@ -333,11 +337,11 @@ export default function Header() {
                         transition={{ duration: 0.3 }}
                         className="absolute top-full left-0 mt-2 w-64 py-2 z-50"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
-                          backdropFilter: 'blur(20px)',
-                          border: '1px solid rgba(255,255,255,0.2)',
+                          background: 'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.12))',
+                          backdropFilter: 'blur(22px)',
+                          border: '1px solid rgba(255,255,255,0.3)',
                           borderRadius: '1rem',
-                          boxShadow: '0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)',
+                          boxShadow: '0 10px 36px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25)',
                           zIndex: 9999
                         }}
                         onMouseEnter={() => setActiveDropdown(item.name)}
@@ -495,10 +499,10 @@ export default function Header() {
               role="navigation"
               aria-label="Mobile navigation menu"
               style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.2)'
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.12))',
+                backdropFilter: 'blur(22px)',
+                border: '1px solid rgba(255,255,255,0.3)',
+                boxShadow: '0 10px 36px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.25)'
               }}
             >
               <div className="py-4 space-y-2">

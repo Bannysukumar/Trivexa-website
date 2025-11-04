@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { 
@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Adepu Sukumar",
     role: "CEO & Founder",
-    image: "/api/placeholder/300/300",
+    image: "/sukumar.jpg",
     bio: "Blockchain visionary with 8+ years of experience in fintech and enterprise solutions. Led 50+ successful blockchain projects.",
     expertise: ["Blockchain Strategy", "Enterprise Solutions", "Team Leadership"],
     social: {
@@ -51,26 +51,117 @@ const teamMembers = [
     }
   },
   {
-    name: "MADAVAN",
-    role: "Chief Technical Officer (CTO)",
-    image: "/api/placeholder/300/300",
-    bio: "Powerful Information Security leader with 7+ years of experience in IT & security operations, ISO 27001, SOC 2, security audits, ITGC, and cyber risk management. Expert in VAPT, application security, and ISMS implementation, with a proven track record of enhancing compliance and minimizing security incidents across financial, banking, and enterprise sector projects.",
+    name: "Gunaseelan",
+    role: "Chief Marketing Officer (CMO)",
+    image: "/gunaseelan.jpg",
+    bio: "Strategic marketing leader with 10+ years of experience in B2B tech marketing, brand development, and digital growth strategies. Expert in blockchain and Web3 marketing, having successfully launched and scaled multiple tech products and services in competitive markets.",
     expertise: [
-      "ISMS",
-      "SOC 2 & ITGC Audits", 
-      "Risk Management",
-      "All Security Operations",
-      "Incident Handling",
-      "VAPT",
-      "Application Security",
-      "Infosec Trainer"
+      "Digital Marketing Strategy",
+      "Brand Development",
+      "Content Marketing",
+      "SEO & SEM",
+      "Social Media Marketing",
+      "Marketing Analytics",
+      "Growth Hacking",
+      "Blockchain & Web3 Marketing"
     ],
     social: {
-      linkedin: "https://www.linkedin.com/in/madavan-cto",
+      linkedin: "https://www.linkedin.com/in/gunaseelan",
+      email: "customer@trivexatechnologies.com"
+    }
+  },
+  {
+    name: "Muni Kumar",
+    role: "Chief Research & Development Officer",
+    image: "/kumar.jpg",
+    bio: "R&D leader with 7+ years designing and delivering high‑performance blockchain and distributed systems. Drives protocol research, PoC-to-production execution, and reliability at scale with a strong security and testing mindset.",
+    expertise: [
+      "Protocol Research",
+      "Distributed Systems",
+      "Performance Engineering",
+      "Prototyping & PoCs",
+      "Testing & Benchmarking",
+      "Security & VAPT",
+      "DevOps & Automation",
+      "AI‑assisted Engineering"
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/in/muni-kumar",
+      email: "customer@trivexatechnologies.com"
+    }
+  },
+  {
+    name: "Datuk Dr. Ganesan Palani",
+    role: "President & Global Head",
+    image: "/presedent.jpg",
+    bio: "Distinguished global business leader with extensive experience in international strategy, partnerships, and enterprise growth across emerging and developed markets. Drives cross‑border alliances, large‑scale programs, and high‑impact initiatives with a strong focus on governance and results.",
+    expertise: [
+      "Global Strategy & Leadership",
+      "International Partnerships",
+      "Enterprise Growth & GTM",
+      "Government & Institutional Relations",
+      "Corporate Governance",
+      "Program Management",
+      "Stakeholder Management",
+      "Executive Advisory"
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/",
+      email: "customer@trivexatechnologies.com"
+    }
+  },
+  {
+    name: "P. Kanishka",
+    role: "Chief Product Manager",
+    image: "/kanishka.jpg",
+    bio: "Product leader with 8+ years shaping blockchain and Web3 products from concept to market. Expert in user research, roadmap planning, and cross-functional execution, with a track record of shipping products that drive adoption and business impact.",
+    expertise: [
+      "Product Strategy & Roadmap",
+      "User Research & Design",
+      "Agile & Scrum",
+      "Market Analysis",
+      "Feature Prioritization",
+      "Stakeholder Management",
+      "Product Analytics",
+      "Blockchain Product Management"
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/in/kanishka",
       email: "customer@trivexatechnologies.com"
     }
   },
 ]
+
+function TeamMemberImage({ member }: { member: typeof teamMembers[0] }) {
+  const [imageError, setImageError] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
+  
+  if (!member.image || member.image === "/api/placeholder/300/300" || imageError) {
+    return (
+      <div className="w-32 h-32 rounded-2xl mx-auto overflow-hidden bg-gradient-to-br from-primary-600 to-navy-600 flex items-center justify-center">
+        <Users className="w-16 h-16 text-white" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="w-32 h-32 rounded-2xl mx-auto overflow-hidden relative">
+      {!imageLoaded && !imageError && (
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-navy-600 flex items-center justify-center">
+          <Users className="w-16 h-16 text-white opacity-50" />
+        </div>
+      )}
+      <img
+        src={member.image}
+        alt={member.name}
+        className="w-full h-full object-cover"
+        onError={() => setImageError(true)}
+        onLoad={() => setImageLoaded(true)}
+        style={{ display: imageError ? 'none' : 'block' }}
+      />
+    </div>
+  )
+}
 
 export default function TeamSection() {
   const [ref, inView] = useInView({
@@ -78,20 +169,6 @@ export default function TeamSection() {
     threshold: 0.1
   })
 
-  // Log team members to console when component mounts
-  React.useEffect(() => {
-    console.log('=== TEAM MEMBERS ===')
-    teamMembers.forEach((member, index) => {
-      console.log(`${index + 1}. ${member.name}`)
-      console.log(`   Role: ${member.role}`)
-      console.log(`   Image: ${member.image}`)
-      console.log(`   Bio: ${member.bio}`)
-      console.log(`   Expertise: ${member.expertise.join(', ')}`)
-      console.log(`   Social Links:`, member.social)
-      console.log('---')
-    })
-    console.log('==================')
-  }, [])
 
   return (
     <section ref={ref} className="py-20 bg-gray-50 dark:bg-gray-800/50">
@@ -131,20 +208,8 @@ export default function TeamSection() {
                 <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 h-full group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                   {/* Image */}
                   <div className="relative mb-6">
-                    <div className="w-32 h-32 rounded-2xl mx-auto overflow-hidden">
-                      {member.image && member.image !== "/api/placeholder/300/300" ? (
-                        <img 
-                          src={member.image} 
-                          alt={member.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-primary-600 to-navy-600 flex items-center justify-center">
-                          <Users className="w-16 h-16 text-white" />
-                        </div>
-                      )}
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <TeamMemberImage member={member} />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center z-10">
                       <Award className="w-4 h-4 text-white" />
                     </div>
                   </div>

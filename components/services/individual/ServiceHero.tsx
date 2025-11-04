@@ -51,6 +51,71 @@ export default function ServiceHero({ serviceData }: ServiceHeroProps) {
 
   const IconComponent = getIcon(serviceData.icon)
 
+  const badgeByService: { [key: string]: string } = {
+    'Layer-1 Blockchain Development': 'Expert Blockchain Development',
+    'Layer-2 Blockchain Solutions': 'Scalable Layer-2 Solutions',
+    'Smart Contract Development': 'Audited Smart Contracts',
+    'DApp Development': 'Production-ready DApps',
+    'Web & Mobile Development': 'Modern Web & Mobile Apps',
+    'AI-Powered Solutions': 'Intelligent AI Integrations',
+    'Telegram Bots Development': 'Custom Telegram Bot Solutions',
+    'AI Automation Services': 'Intelligent Automation Solutions',
+  }
+
+  const benefitsByService: { [key: string]: string[] } = {
+    'Layer-1 Blockchain Development': [
+      'Custom blockchain architecture design',
+      'Advanced consensus mechanisms',
+      'Comprehensive security audits',
+      '24/7 technical support',
+    ],
+    'Layer-2 Blockchain Solutions': [
+      'Optimistic/ZK rollups & sidechains',
+      'Cross-chain bridges and interoperability',
+      'Low fees and high throughput',
+      'Enterprise-grade monitoring',
+    ],
+    'Smart Contract Development': [
+      'Security audits and best practices',
+      'Gas optimization and testing',
+      'DeFi/NFT/DAO contract expertise',
+      'Upgradeable and modular contracts',
+    ],
+    'DApp Development': [
+      'Wallet integration (MetaMask, WalletConnect)',
+      'Seamless Web3 onboarding UX',
+      'Analytics and observability',
+      'Responsive, accessible interfaces',
+    ],
+    'Web & Mobile Development': [
+      'Cross‑platform (Web, iOS, Android)',
+      'Secure authentication & authorization',
+      'Performance & Lighthouse optimization',
+      'Scalable backend APIs & cloud infra',
+    ],
+    'AI-Powered Solutions': [
+      'LLM/ML integrations for workflows',
+      'Predictive analytics & automation',
+      'Responsible AI & guardrails',
+      'MLOps pipelines & model serving',
+    ],
+    'Telegram Bots Development': [
+      'Custom bot development & deployment',
+      'Payment & crypto integration',
+      'AI-powered chatbots & automation',
+      '24/7 monitoring & support',
+    ],
+    'AI Automation Services': [
+      'Workflow & process automation',
+      'Document processing & extraction',
+      'Customer service automation',
+      'Custom AI integration & consulting',
+    ],
+  }
+
+  const badgeText = badgeByService[serviceData.title] || 'Expert Services'
+  const benefits = benefitsByService[serviceData.title] || benefitsByService['Layer-1 Blockchain Development']
+
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-900 dark:to-navy-900">
       {/* Background Pattern */}
@@ -73,7 +138,7 @@ export default function ServiceHero({ serviceData }: ServiceHeroProps) {
               className="inline-flex items-center space-x-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <Shield className="w-4 h-4" />
-              <span>Expert Blockchain Development</span>
+              <span>{badgeText}</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -112,12 +177,7 @@ export default function ServiceHero({ serviceData }: ServiceHeroProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-4 mb-8"
             >
-              {[
-                "Custom blockchain architecture design",
-                "Advanced consensus mechanisms",
-                "Comprehensive security audits",
-                "24/7 technical support"
-              ].map((benefit, index) => (
+              {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                   <span className="text-gray-700 dark:text-gray-300">{benefit}</span>

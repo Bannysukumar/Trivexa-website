@@ -10,7 +10,8 @@ import {
   Clock,
   Award,
   Code,
-  Database
+  Database,
+  MessageCircle
 } from 'lucide-react'
 
 interface ServiceData {
@@ -219,6 +220,70 @@ const getServiceFeatures = (serviceTitle: string) => {
         icon: Award,
         title: "Predictive Analytics",
         description: "Data-driven insights and forecasting for better decision making."
+      }
+    ],
+    "Telegram Bots Development": [
+      {
+        icon: MessageCircle,
+        title: "Custom Bot Development",
+        description: "Build tailored Telegram bots for your specific business needs and workflows."
+      },
+      {
+        icon: Zap,
+        title: "Automation & Workflows",
+        description: "Automate repetitive tasks, notifications, and business processes via Telegram."
+      },
+      {
+        icon: Database,
+        title: "Payment Integration",
+        description: "Integrate cryptocurrency and traditional payment gateways into your Telegram bot."
+      },
+      {
+        icon: Users,
+        title: "AI Chatbots",
+        description: "Intelligent chatbots with natural language understanding for customer support."
+      },
+      {
+        icon: Shield,
+        title: "Secure & Reliable",
+        description: "Enterprise-grade security and uptime for mission-critical bot operations."
+      },
+      {
+        icon: Code,
+        title: "API Integration",
+        description: "Connect your bot with external services, databases, and third-party APIs."
+      }
+    ],
+    "AI Automation Services": [
+      {
+        icon: Zap,
+        title: "Workflow Automation",
+        description: "Automate complex business workflows and processes with intelligent AI systems."
+      },
+      {
+        icon: Database,
+        title: "Document Processing",
+        description: "AI-powered document extraction, classification, and data processing solutions."
+      },
+      {
+        icon: Users,
+        title: "Customer Service Automation",
+        description: "Intelligent chatbots and virtual assistants for 24/7 customer support."
+      },
+      {
+        icon: Shield,
+        title: "Process Optimization",
+        description: "Analyze and optimize business processes using AI-driven insights and automation."
+      },
+      {
+        icon: Code,
+        title: "Integration Services",
+        description: "Seamless integration with existing systems, APIs, and business tools."
+      },
+      {
+        icon: Award,
+        title: "Custom AI Solutions",
+        description: "Tailored AI automation solutions designed for your specific industry and needs."
       }
     ]
   }
