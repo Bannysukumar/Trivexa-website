@@ -29,7 +29,7 @@ cat > .env.local << EOF
 # Trivexa Technologies Website Environment Variables
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_GA_ID=your-google-analytics-id
-CONTACT_EMAIL=trivexatechpvt@gmail.com
+CONTACT_EMAIL=customer@trivexatechnologies.com
 CONTACT_PHONE=6301846681
 
 # Add your API keys and other environment variables here

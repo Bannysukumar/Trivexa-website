@@ -224,8 +224,8 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
-                <a href="mailto:trivexatechpvt@gmail.com" className="text-gray-300 hover:text-primary-400 transition-colors">
-                  trivexatechpvt@gmail.com
+                <a href="mailto:customer@trivexatechnologies.com" className="text-gray-300 hover:text-primary-400 transition-colors">
+                  customer@trivexatechnologies.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -258,7 +258,9 @@ export default function Footer() {
 
             {/* 3D Social Links */}
             <div className="flex space-x-4 mt-6">
-              {socialLinks.map((social, index) => (
+              {socialLinks
+                .filter((s) => s.name !== 'GitHub' && s.name !== 'YouTube')
+                .map((social, index) => (
                 <motion.a
                   key={social.name}
                   href={social.href}

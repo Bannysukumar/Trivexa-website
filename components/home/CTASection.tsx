@@ -61,8 +61,8 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     description: "Send us your project details",
-    action: "trivexatechpvt@gmail.com",
-    href: "mailto:trivexatechpvt@gmail.com"
+    action: "customer@trivexatechnologies.com",
+    href: "mailto:customer@trivexatechnologies.com"
   }
 ]
 

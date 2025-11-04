@@ -286,7 +286,7 @@ This project is proprietary software owned by Trivexa Technologies Pvt. Ltd.
 ## 🤝 Support
 
 For technical support or questions, please contact:
-- **Email**: trivexatechpvt@gmail.com
+- **Email**: customer@trivexatechnologies.com
 - **Phone**: 6301846681
 - **Website**: https://trivexa.com
 

@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["trivexatechpvt@gmail.com", "trivexatechpvt@gmail.com"],
+    details: ["customer@trivexatechnologies.com", "customer@trivexatechnologies.com"],
     description: "Send us your project details"
   },
   {

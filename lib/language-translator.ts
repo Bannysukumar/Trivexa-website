@@ -29,18 +29,18 @@ export const translations = {
 
   // Error messages
   error: {
-    en: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly at trivexatechpvt@gmail.com.",
-    te: "క్షమించండి, నేను కొన్ని technical difficulties ఎదుర్కొంటున్నాను. దయచేసి మళ్లీ ప్రయత్నించండి లేదా మా team ని నేరుగా trivexatechpvt@gmail.com వద్ద contact చేయండి.",
-    ta: "மன்னிக்கவும், நான் சில technical difficulties எதிர்கொள்கிறேன். தயவுசெய்து மீண்டும் முயற்சிக்கவும் அல்லது எங்கள் team ஐ நேரடியாக trivexatechpvt@gmail.com இல் தொடர்பு கொள்ளவும்.",
-    hi: "मुझे खेद है, लेकिन मैं कुछ technical difficulties का सामना कर रहा हूं। कृपया फिर से कोशिश करें या हमारी team से सीधे trivexatechpvt@gmail.com पर संपर्क करें।"
+    en: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly at customer@trivexatechnologies.com.",
+    te: "క్షమించండి, నేను కొన్ని technical difficulties ఎదుర్కొంటున్నాను. దయచేసి మళ్లీ ప్రయత్నించండి లేదా మా team ని నేరుగా customer@trivexatechnologies.com వద్ద contact చేయండి.",
+    ta: "மன்னிக்கவும், நான் சில technical difficulties எதிர்கொள்கிறேன். தயவுசெய்து மீண்டும் முயற்சிக்கவும் அல்லது எங்கள் team ஐ நேரடியாக customer@trivexatechnologies.com இல் தொடர்பு கொள்ளவும்.",
+    hi: "मुझे खेद है, लेकिन मैं कुछ technical difficulties का सामना कर रहा हूं। कृपया फिर से कोशिश करें या हमारी team से सीधे customer@trivexatechnologies.com पर संपर्क करें।"
   },
 
   // Contact information
   contact: {
-    en: "You can reach us at trivexatechpvt@gmail.com or 6301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?",
-    te: "మీరు మమ్మల్ని trivexatechpvt@gmail.com లేదా 6301846681 వద్ద చేరుకోవచ్చు. మా website లో contact form కూడా ఉంది. మా team సాధారణంగా 24 గంటలలో response చేస్తుంది. నేను మీకు మరేదైనా help చేయగలనా?",
-    ta: "நீங்கள் எங்களை trivexatechpvt@gmail.com அல்லது 6301846681 இல் அடையலாம். எங்கள் website இல் contact form ம் உள்ளது. எங்கள் team பொதுவாக 24 மணி நேரத்தில் பதிலளிக்கும். நான் உங்களுக்கு வேறு எதையாவது உதவ முடியுமா?",
-    hi: "आप हमसे trivexatechpvt@gmail.com या 6301846681 पर संपर्क कर सकते हैं। हमारी website पर contact form भी है। हमारी team आमतौर पर 24 घंटे में response करती है। क्या मैं आपकी किसी और चीज़ में मदद कर सकता हूं?"
+    en: "You can reach us at customer@trivexatechnologies.com or 6301846681. We also have a contact form on our website. Our team typically responds within 24 hours. Would you like me to help you with anything else?",
+    te: "మీరు మమ్మల్ని customer@trivexatechnologies.com లేదా 6301846681 వద్ద చేరుకోవచ్చు. మా website లో contact form కూడా ఉంది. మా team సాధారణంగా 24 గంటలలో response చేస్తుంది. నేను మీకు మరేదైనా help చేయగలనా?",
+    ta: "நீங்கள் எங்களை customer@trivexatechnologies.com அல்லது 6301846681 இல் அடையலாம். எங்கள் website இல் contact form ம் உள்ளது. எங்கள் team பொதுவாக 24 மணி நேரத்தில் பதிலளிக்கும். நான் உங்களுக்கு வேறு எதையாவது உதவ முடியுமா?",
+    hi: "आप हमसे customer@trivexatechnologies.com या 6301846681 पर संपर्क कर सकते हैं। हमारी website पर contact form भी है। हमारी team आमतौर पर 24 घंटे में response करती है। क्या मैं आपकी किसी और चीज़ में मदद कर सकता हूं?"
   },
 
   // Service descriptions

@@ -35,7 +35,7 @@ export default function ContactDetails() {
                 Email
               </h4>
               <p className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
-                trivexatechpvt@gmail.com
+                customer@trivexatechnologies.com
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
                 Dedicated account managers

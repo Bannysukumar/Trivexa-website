@@ -260,9 +260,9 @@ export class AdvancedAITrainingSystem {
   // Get business call-to-action
   private getBusinessCTA(language: string): string {
     if (language === 'en') {
-      return "\n\nReady to start your blockchain project? Contact us at trivexatechpvt@gmail.com or WhatsApp: +91-6301846681 for a free consultation and detailed project quote."
+      return "\n\nReady to start your blockchain project? Contact us at customer@trivexatechnologies.com or WhatsApp: +91-6301846681 for a free consultation and detailed project quote."
     } else {
-      return "\n\nअपना blockchain project शुरू करने के लिए तैयार हैं? मुफ्त consultation और detailed project quote के लिए trivexatechpvt@gmail.com पर संपर्क करें या WhatsApp: +91-6301846681 पर मैसेज करें।"
+      return "\n\nअपना blockchain project शुरू करने के लिए तैयार हैं? मुफ्त consultation और detailed project quote के लिए customer@trivexatechnologies.com पर संपर्क करें या WhatsApp: +91-6301846681 पर मैसेज करें।"
     }
   }
 

@@ -378,7 +378,7 @@ export default function MultiLanguageAIChatbot() {
         console.error('Error generating AI response:', error)
         const errorMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly at trivexatechpvt@gmail.com.",
+          text: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly at customer@trivexatechnologies.com.",
           sender: 'bot',
           timestamp: new Date(),
           confidence: 0.1,

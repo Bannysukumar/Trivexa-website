@@ -84,7 +84,7 @@ export const organizationData = {
     "@type": "ContactPoint",
     telephone: "6301846681",
     contactType: "customer service",
-    email: "trivexatechpvt@gmail.com",
+    email: "customer@trivexatechnologies.com",
     availableLanguage: "English"
   },
   sameAs: [

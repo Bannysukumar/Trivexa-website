@@ -25,7 +25,7 @@ const teamMembers = [
       linkedin: "www.linkedin.com/in/adepusukumar",
       twitter: "https://twitter.com/adepu_sukumar",
       github: "https://github.com/adepu-sukumar",
-      email: "trivexatechpvt@gmail.com"
+      email: "customer@trivexatechnologies.com"
     }
   },
   {
@@ -47,7 +47,7 @@ const teamMembers = [
       linkedin: "https://www.linkedin.com/in/velu-mani-56b49a32b/",
       //twitter: "https://twitter.com/t_velumani",
       //github: "https://github.com/t-velumani",
-      email: "trivexatechpvt@gmail.com"
+      email: "customer@trivexatechnologies.com"
     }
   },
   {
@@ -67,7 +67,7 @@ const teamMembers = [
     ],
     social: {
       linkedin: "https://www.linkedin.com/in/madavan-cto",
-      email: "trivexatechpvt@gmail.com"
+      email: "customer@trivexatechnologies.com"
     }
   },
 ]

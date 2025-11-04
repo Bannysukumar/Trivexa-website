@@ -158,7 +158,7 @@ export default function TermsOfService() {
                   <strong>Trivexa Technologies Pvt. Ltd.</strong>
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">
-                  Email: trivexatechpvt@gmail.com
+                  Email: customer@trivexatechnologies.com
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">
                   Phone: 6301846681
